@@ -1,3 +1,8 @@
+#### Cand clonam proiectul
+```
+git clone https://github.com/SkillBrain-com/Meteor-fe-g1-15-09-2022.git
+```
+
 #### Cand luam modificarile de pe git / cand cerem ultimul branch creat
 ```
 git fetch
