@@ -14,3 +14,8 @@ console.log(produs);
 console.log(catulCuVirgula);
 console.log(restul);
 console.log(catul);
+
+
+console.log(numar1 + numar2);
+console.log("Suma numerelor: " + numar1 + " si " + numar2 + " este " + suma);
+console.log(`Suma numerelor: ${numar1} si ${numar2} este ${suma}`);
