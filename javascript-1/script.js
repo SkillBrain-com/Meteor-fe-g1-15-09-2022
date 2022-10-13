@@ -1,7 +1,10 @@
-let cartof = 11;
+let numar1 = 1;
+let numar2 = 1;
 
-console.log(cartof);
+// conventie: nu se atribuie alte tipuri de date fata de declaratie
+// numar1 = "1";
+// numar2 = "1";
 
-cartof = 30;
+let suma = numar1 + numar2;
 
-console.log(cartof);
+console.log(suma);
