@@ -1,4 +1,5 @@
-console.log("Ce mai faci?");
+let cartof;
 
-// aceasta instructiune afiseaza un mesaj
-console.log("Salut Meteor");
+cartof = 11;
+
+console.log(cartof);
