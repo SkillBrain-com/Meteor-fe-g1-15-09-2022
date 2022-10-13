@@ -1,5 +1,3 @@
-let cartof;
-
-cartof = 11;
+let cartof = 11;
 
 console.log(cartof);
