@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tema 1 - Nivel 3</title>
+    
+</head>
+
+<body>
+    <h2>Tema 1 - Nivel 3</h2>
+    <p id="result"></p>
+
+    <script>
+        const arr = [
+            {
+                "nume": "Dealer Brasov",
+                "masini": [
+                    {
+                        "pret": 50
+                    },
+                    {
+                        "pret": 125
+                    },
+                    {
+                        "pret": 50
+                    }
+                ]
+            },
+            {
+                "nume": "Dealer Iasi",
+                "masini": [
+                    {
+                        "pret": 19
+                    },
+                    {
+                        "pret": 11
+                    },
+                    {
+                        "pret": 999
+                    }
+                ]
+            },
+            {
+                "nume": "Dealer Valcea",
+                "masini": [
+                    {
+                        "pret": 435
+                    },
+                    {
+                        "pret": 234
+                    },
+                    {
+                        "pret": 234
+                    }
+                ]
+            },
+            {
+                "nume": "Dealer Bucuresti",
+                "masini": [
+                    {
+                        "pret": 321
+                    },
+                    {
+                        "pret": 12
+                    },
+                    {
+                        "pret": 543
+                    },
+                    {
+                        "pret": 43
+                    },
+                    {
+                        "pret": 123
+                    }
+                ]
+            }
+        ]
+
+        let len = arr.length;
+        for (let i = 0; i < len; i++) {
+            document.getElementById("result").innerHTML += arr[i]["nume"] + "<br>";
+
+        }
+    </script>
+    
+</body>
+</html>
