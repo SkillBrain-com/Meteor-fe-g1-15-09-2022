@@ -78,10 +78,21 @@
             }
         ]
 
-        let len = arr.length;
-        for (let i = 0; i < len; i++) {
+        for (let i = 0; i < arr.length; i++) {
             document.getElementById("result").innerHTML += arr[i]["nume"] + "<br>";
+            contor = 0;
+            for (let j = 0; j < arr[i]["masini"].length; j++) {
+                if (arr[i]["masini"][j]["pret"] < 100) {
+                    document.getElementById("result").innerHTML += arr[i]["masini"][j]["pret"] + "<br>";
+                    contor++;
+                }
+            }
 
+            if (! contor) {
+                document.getElementById("result").innerHTML += "Nu au la vanzare masini cu pretul sub 100" + "<br>";
+            }
+
+            document.getElementById("result").innerHTML += "<br>";
         }
     </script>
     
