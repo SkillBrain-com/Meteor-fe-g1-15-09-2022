@@ -12,3 +12,8 @@ console.log(`valoarea lui a este: ${a}`);
 
 console.log('a si-a schimbat valoarea');
 console.log(`Valoarea lui a este: ${a}`);
+
+a = a + 1;
+
+console.log('a si-a marit valoarea cu 1');
+console.log(`Valoarea lui a este: ${a}`)
