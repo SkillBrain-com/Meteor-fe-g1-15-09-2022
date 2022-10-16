@@ -5,62 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tema 1 - Nivel 1</title>
-    
-    </head>
+</head>
 <body>
     <label for="input-number">Please enter a number between 1 and 100:</label>
     <input type="number" id="input-number">
     <button id="btn-submit">Submit</button><br>
-    <div id="alert" style="display: none;">!!! Number is not valid. Please re-enter a number between 1 and 100 !!!</div>
-    <textarea style="border: none; display: none;" name="result" id="result" cols="30" rows=50></textarea>
+    <textarea style="border: none; display: none;" name="result" id="result" cols="100" rows=50></textarea>
 
-    <script>
-        let btnSubmit = document.getElementById("btn-submit");
-        btnSubmit.onclick = function() {
-            document.getElementById("result").innerHTML = "";
-            document.getElementById("alert").style = "display: none;";
-            let n = parseInt(document.getElementById("input-number").value);
-            let valid = validateInput(n);
-            if (valid) {
-                for (let i = 1; i < n + 1; i++) {
-                if (i%3 === 0) {
-                        if (i%5 === 0) {
-                            console.log("n = " + i + " >> FizzBuzz");
-                            document.getElementById("result").innerHTML += "\nn = " + i + "\t >> FizzBuzz";
-                        }
-                        else {
-                            console.log("n = " + i + " >> Fizz");
-                            document.getElementById("result").innerHTML += "\nn = " + i + "\t >> Fizz";
-                        }
-                    }
-                    else {
-                        if (i%5 === 0) {
-                            console.log("n = " + i + " >> Buzz");
-                            document.getElementById("result").innerHTML += "\nn = " + i + "\t >> Buzz";
-                        }
-                        else {
-                            console.log("n = " + i);
-                            document.getElementById("result").innerHTML += "\nn = " + i;
-                        }
-                    }
-                }
-                document.getElementById("result").style = "display: content; border: none";  
-            }
-            else {
-                document.getElementById("alert").style = "display: content;";
-            }
-            
-        } 
+    <script src="./script-nivel-1.js"></script>
 
-        function validateInput(nr) {
-            let result = true;
-            if ((nr < 1) || (nr > 100) ) {
-                result = false;
-            }
-            return result;
-        }
-
-    </script>
-    
 </body>
 </html>
