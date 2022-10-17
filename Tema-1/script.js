@@ -22,3 +22,10 @@ a= a+1;
 console.log("a si-a marit valoarea cu 1");
 console.log("Valoarea lui a este ${a}");
 console.log(a);
+
+// console.log("EXERCITIUL 4")
+let nume= Ghertan;
+let prenume=Bianca;
+console.log("Numele meu este: ${nume} ${prenume}");
+console.log(nume);
+console.log(prenume);
