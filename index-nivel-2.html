@@ -12,21 +12,7 @@
     <h2>Tema 1 - Nivel 2</h2>
     <p id="result"></p>
 
-    <script>
-        const list = [1, 3, 1, 5, 3, 2];
-        const count = {}; // va contine nr de aparitii in list
-        list.forEach(function(x) {
-            count[x] = (count[x] || 0) + 1;
-        });
-        
-        let s = new Set(list.sort()); // cream lista sortata crescator si cu elemente unice pt a itera "count"
-        let result_value = "";
-        s.forEach (function(x) {
-            result_value += x + "  -  " + count[x] + " aparitii <br>";
-        })
-
-        document.getElementById("result").innerHTML = result_value;
-    </script>
+    <script src="./script-nivel-2.js"></script>
     
 </body>
 </html>
