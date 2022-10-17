@@ -11,7 +11,7 @@ console.log("lui b i s-a atribuit 10")
 
 console.log('valoarea lui b este ${b}')
 
-//let a = "20"
+//let b = "20"
 
 console.log("b si-a schimbat valoarea")
 
