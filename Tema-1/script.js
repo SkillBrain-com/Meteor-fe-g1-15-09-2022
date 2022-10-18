@@ -13,7 +13,7 @@ console.log(a);
 
 console.log(`Valoarea lui a este ${a}`);
 a= 20;
-console.log(a si-a schimbat valoarea');
+console.log('a si-a schimbat valoarea');
 console.log('Valoarea lui a este ${a}');
 console.log(a)
 
