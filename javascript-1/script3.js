@@ -1,0 +1,15 @@
+console.log("EXERCITIUL 3");
+let luni = 1;
+let marti = 2;
+let miercuri = 3;
+let joi = 4;
+let vineri = 5;
+let sambata = 6;
+let duminica = 7;
+console.log("Luni: " + luni);
+console.log("marti: " + marti);
+console.log("miercuri: " + miercuri);
+console.log("joi: " + joi);
+console.log("vineri: " + vineri);
+console.log("sambata: " + sambata);
+console.log("duminica: " + duminica);
