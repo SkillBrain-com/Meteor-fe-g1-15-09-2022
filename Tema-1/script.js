@@ -2,11 +2,10 @@ console.log("EXERCITIUL 1")
 
 
 let a;
-
+a= 10;
  console.log('a a fost declarat');
 
  console.log(`Valoarea lui a este ${a}`);
-a= 10;
 console.log("Lui a i s-a atribuit 10");
 console.log(a);
  

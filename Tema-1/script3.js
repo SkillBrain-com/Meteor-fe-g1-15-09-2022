@@ -14,7 +14,7 @@ let Sambata;
 Sambata=5;
 let Duminica;
 Duminica=6;
-
+ 
 console.log(Luni);
 console.log(Marti);
 console.log(Miercuri);
@@ -23,12 +23,12 @@ console.log(Vineri);
 console.log(Sambata);
 console.log(Duminica);
 
+
  console.log(`Luni=${Luni}`);
  console.log(`Marti=${Marti}`);
- console.log(`Miercuri=${Miercuri});
+ console.log(`Miercuri=${Miercuri}`);
 
  console.log(`Joi= ${Joi}`);
  console.log(`Vineri= ${Vineri}`);
  console.log(`Sambata= ${Sambata}`)
  console.log(`Duminica= ${Duminica}`);
- 

@@ -1,9 +1,7 @@
 console.log("EXERCITIUL 4")
 
-let nume;
-nume=Ghertan
-let prenume;
-prenume=Bianca;
+let nume= "Ghertan";
+let prenume= "Bianca";
 console.log(nume);
 console.log(prenume);
 
