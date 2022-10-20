@@ -1,9 +1,5 @@
-let numar = 10;
-let text = "10";
+let a = 10;
 
-if (numar === text) {
-    console.log(`Valorile sunt egale nr:${numar} text:${text}`);
-}
-else {
-    console.log(`Valorile NU sunt egale nr:${numar} text:${text}`);
+if (a !== undefined && a >= 0 && a <= 100) {
+    console.log("A este intre 0 si 100 inclusiv 0 si 100");
 }
