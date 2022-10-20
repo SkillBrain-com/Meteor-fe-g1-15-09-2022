@@ -1,7 +1,9 @@
-let a = 10;
+let numar = 10;
+let text = "10";
 
-if (a < 0) {
-    console.log(`A${a} este negativ`);
+if (numar === text) {
+    console.log(`Valorile sunt egale nr:${numar} text:${text}`);
 }
-
-console.log("Sfarsitul programului");
+else {
+    console.log(`Valorile NU sunt egale nr:${numar} text:${text}`);
+}
