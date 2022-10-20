@@ -1,14 +1,7 @@
-let a, b;
+let a = 10;
 
-a = 10;
-b = 1;
+if (a < 0) {
+    console.log(`A${a} este negativ`);
+}
 
-if (a > b) {
-    console.log(`A(${a}) este mai mare ca B(${b})`);
-}
-else if (a === b){
-    console.log(`A(${a}) este egal cu B(${b})`);
-}
-else {
-    console.log(`A(${a}) este mai mic ca B(${b})`);
-}
+console.log("Sfarsitul programului");
