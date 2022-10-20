@@ -1,20 +1,13 @@
 let nume = "Pizza Americana";
-let pret = 25.99;
-let esteDisponibilaInMaiMulteMarimi = false;
+let termenCautare = "zz";
 
-let numeProdusCautat = "Pizza Hawai";
-let pretMinimProdusCautat = 10;
-let pretMaximProdusCautat = 30;
-let doresteDisponibilInMarimi = true;
+let rezultat;
 
-if (
-    nume === numeProdusCautat &&
-    pret >= pretMinimProdusCautat &&
-    pret <= pretMaximProdusCautat &&
-    esteDisponibilaInMaiMulteMarimi === doresteDisponibilInMarimi
-) {
-    console.log("Am gasit produsul");
+if (nume.includes(termenCautare) === true) {
+    rezultat = nume;
 }
 else {
-    console.log("Nu s-au gasit rezultate");
+    rezultat = "Nu s-au gasit rezultate"
 }
+
+console.log(rezultat);
