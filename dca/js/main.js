@@ -1,34 +1,28 @@
-const DATA = [
-    {
-        price: 10.00,
-        unitCount: 10,
-    },
-    {
-        price: 12.50,
-        unitCount: 4,
-    },
-    {
-        price: 11.00,
-        unitCount: 2,
-    },
-];
+const DATA = [];
 const priceInput = document.querySelector("#priceInput");
 const unitCountInput = document.querySelector("#unitCountInput");
 const sharesSection = document.querySelector("#sharesSection");
+const addToStockButton = document.querySelector("#addToStockButton");
 
 function dca(stock) {
     let sum = 0;
     let unitSum = 0;
+
+    if (stock.length === 0) {
+        return 0;
+    }
+
     for (let i = 0; i < stock.length; i++) {
         sum += stock[i].price * stock[i].unitCount;
         unitSum += stock[i].unitCount;
     }
+
     return sum / unitSum;
 }
 
 function addShareToData(){
-    const priceValue = priceInput.value;
-    const unitCountValue = unitCountInput.value;
+    const priceValue = Number(priceInput.value);
+    const unitCountValue = Number(unitCountInput.value);
 
     const share = {
         price: priceValue,
@@ -45,16 +39,16 @@ function renderData(stock) {
         html += `
             <div class="flex">
                 <div class="cell">
-                    <h6>Price</h6>
-                    <h6>${stock[i].price}</h6>
+                    <h5>Price</h5>
+                    <h5>${stock[i].price.toFixed(2)}</h5>
                 </div>
                 <div class="cell">
-                    <h6>Unit count</h6>
-                    <h6>${stock[i].unitCount}</h6>
+                    <h5>Unit count</h5>
+                    <h5>${stock[i].unitCount.toFixed(2)}</h5>
                 </div>
                 <div class="cell">
-                    <h6>Value</h6>
-                    <h6>${stock[i].price * stock[i].unitCount}</h6>
+                    <h5>Value</h5>
+                    <h5>${stock[i].price * stock[i].unitCount}</h5>
                 </div>
             </div>
         `;
@@ -62,12 +56,18 @@ function renderData(stock) {
 
     html += `
         <div>
-            <h1>DCA ${dcaResult} LEI </h1>
+            <h1>DCA ${dcaResult.toFixed(2)} LEI </h1>
         </div>
     `;
 
     sharesSection.innerHTML = html;
 }
 
+addToStockButton.addEventListener("click", function(){
+    addShareToData();
+    priceInput.value = "";
+    unitCountInput.value = "";
+    renderData(DATA);
+});
 
 renderData(DATA);
