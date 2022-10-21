@@ -5,8 +5,35 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DCA</title>
+    <style>
+        .flex {
+            display:flex;
+        }
+
+        .cell {
+            padding: 0.25rem 1rem;
+            border: 1px solid #ccc;
+        }
+
+
+    </style>
 </head>
 <body>
+    <div class="flex">
+        <div>
+            <label for="priceInput">Price</label>
+            <input id="priceInput" />
+        </div>
+        <div>
+            <label for="unitCountInput">Unit Count</label>
+            <input id="unitCountInput" />
+        </div>
+        <button>Add To Stock</button>
+    </div>
+
+    <div id="sharesSection">
+
+    </div>
     <script src="js/main.js"></script>
 </body>
 </html>

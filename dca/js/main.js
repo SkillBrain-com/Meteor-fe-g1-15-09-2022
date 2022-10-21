@@ -12,7 +12,7 @@ const DATA = [
         unitCount: 2,
     },
 ];
-
+const sharesSection = document.querySelector("#sharesSection");
 
 function dca(stock) {
     let sum = 0;
@@ -24,5 +24,36 @@ function dca(stock) {
     return sum / unitSum;
 }
 
-const result = dca(DATA);
-console.log(result);
+function renderData(stock) {
+    let html = "";
+    const dcaResult = dca(stock);
+    for (let i = 0; i < stock.length; i++) {
+        html += `
+            <div class="flex">
+                <div class="cell">
+                    <h6>Price</h6>
+                    <h6>${stock[i].price}</h6>
+                </div>
+                <div class="cell">
+                    <h6>Unit count</h6>
+                    <h6>${stock[i].unitCount}</h6>
+                </div>
+                <div class="cell">
+                    <h6>Value</h6>
+                    <h6>${stock[i].price * stock[i].unitCount}</h6>
+                </div>
+            </div>
+        `;
+    }
+
+    html += `
+        <div>
+            <h1>DCA ${dcaResult} LEI </h1>
+        </div>
+    `;
+
+    sharesSection.innerHTML = html;
+}
+
+
+renderData(DATA);
