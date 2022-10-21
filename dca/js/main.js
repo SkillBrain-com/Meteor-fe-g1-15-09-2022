@@ -12,6 +12,8 @@ const DATA = [
         unitCount: 2,
     },
 ];
+const priceInput = document.querySelector("#priceInput");
+const unitCountInput = document.querySelector("#unitCountInput");
 const sharesSection = document.querySelector("#sharesSection");
 
 function dca(stock) {
@@ -22,6 +24,18 @@ function dca(stock) {
         unitSum += stock[i].unitCount;
     }
     return sum / unitSum;
+}
+
+function addShareToData(){
+    const priceValue = priceInput.value;
+    const unitCountValue = unitCountInput.value;
+
+    const share = {
+        price: priceValue,
+        unitCount: unitCountValue
+    };
+
+    DATA.push(share);
 }
 
 function renderData(stock) {
