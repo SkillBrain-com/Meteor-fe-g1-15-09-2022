@@ -6,4 +6,4 @@ let nume="Radu";
 let prenume="Georgiana";
 
 
-console.log("Numele meu este:Radu Georgiana");
+console.log(`Numele meu este ${nume} ${prenume}`);
