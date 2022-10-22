@@ -18,5 +18,5 @@ console.log(`Vineri: ${4}`);
 let sambata=5;
 console.log(`Sambata: ${5}`);
 
-let Duminica=6
+let duminica=6
 console.log(`Duminica: ${6}`);
