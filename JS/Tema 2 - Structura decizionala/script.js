@@ -3,8 +3,8 @@ console.log(`Exercitiul 1`);
 
 let a = 123;
 
- 
-if (a % 2 === 0) {
+
+if(a % 2 === 0) {
     console.log(`Numarul ${a} este par`);
 }
 
