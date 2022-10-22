@@ -1,5 +1,4 @@
 console.log("Tema 1 - Avansati");
-console.log("Tema mutata in branch_ul Ale-Barboni-Teme-extra")
 console.log("Fizz&Buzz");
 
 for (var n = 1; n < 101; n++) {
