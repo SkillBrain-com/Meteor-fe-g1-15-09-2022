@@ -1,7 +1,7 @@
 console.log(`Tema 2 - Structura decizionala`);
 console.log(`Exercitiul 1`);
 
-let n = "";
+let a = 123;
 
  
 if (a % 2 === 0) {
