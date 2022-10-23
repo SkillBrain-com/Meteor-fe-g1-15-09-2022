@@ -40,8 +40,7 @@ const ultimaLiteraText2 = text2.charAt(text2.length - 1);
     && (lungimeText2 >= 3 && lungimeText2 <= 5)) {
     console.log(`Textul "${text2}" incepe cu o litera mica sau se termina cu o cifra si are intre 2 si 5 caractere`);
     }
-
-    else
+    else {
     console.log(`Textul "${text2}" nu respecta regulile`);
-
+    }
 
