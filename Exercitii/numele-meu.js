@@ -5,6 +5,6 @@ let Nume = "Andrei"
 let Prenume = "Dragomir"
 
 
-console.log("Numele meu este:")
+console.log("Numele meu este: Dragomir Andrei")
 
 
