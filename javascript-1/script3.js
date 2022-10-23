@@ -1,22 +1,22 @@
 console.log("EXERCITIUL 3");
 
 let luni=0;
-console.log(`Luni: ${0}`);
+console.log(`Luni: ${luni}`);
 
 let marti=1;
-console.log(`Marti: ${1}`);
+console.log(`Marti: ${marti}`);
 
 let miercuri=2;
-console.log(`Miercuri: ${2}`);
+console.log(`Miercuri: ${miercuri}`);
 
 let joi=3;
-console.log(`Joi: ${3}`);
+console.log(`Joi: ${joi}`);
 
 let vineri=4; 
-console.log(`Vineri: ${4}`);
+console.log(`Vineri: ${vineri}`);
 
 let sambata=5;
-console.log(`Sambata: ${5}`);
+console.log(`Sambata: ${sambata}`);
 
 let duminica=6
-console.log(`Duminica: ${6}`);
+console.log(`Duminica: ${duminica}`);
