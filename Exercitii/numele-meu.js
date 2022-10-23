@@ -1,10 +1,10 @@
-console.log("EXERCITIUL 4")
+console.log(`EXERCITIUL 4`);
 
 let Nume = "Andrei"
 
 let Prenume = "Dragomir"
 
 
-console.log("Numele meu este: Dragomir Andrei")
+console.log(`Numele meu este: ${Nume} ${Prenume}`)
 
 
