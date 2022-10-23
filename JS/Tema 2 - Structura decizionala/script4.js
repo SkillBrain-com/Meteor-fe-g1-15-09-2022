@@ -21,4 +21,5 @@ if((lungimeText3 > 7 && lungimeText3 < 9) && textContineCaracterul && ((primaLit
 
     else {
     console.log(`false`);
-}
+    }
+
