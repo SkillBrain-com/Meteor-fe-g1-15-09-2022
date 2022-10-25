@@ -40,4 +40,3 @@ git commit -m "Mesajul de pe cutie"
 ```
 git push
 ```
-
