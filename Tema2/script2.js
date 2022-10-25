@@ -1,6 +1,6 @@
 console.log ("Exercitiul 2")
 
-number = 150000;
+ const number = 150000;
 
 if (number <= 99) {
   console.log (`${number} are mai putin de trei cifre`);
