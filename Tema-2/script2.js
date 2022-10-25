@@ -1,7 +1,7 @@
 console.log("Tema2 - EXERCITIUL 2");
 
 let a = 123;
-rest = a % 2;
+const restEx2 = a % 2;
 
 
 if (a < 99) {           

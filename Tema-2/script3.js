@@ -11,8 +11,10 @@ if (
 	ultimaLitera >= "0" && ultimaLitera <= "9" &&  // SAU textul inceape cu o litera mica SAU se termina cu o cifra
 	lungimeText >= 3 && lungimeText <= 5          //textul este mai lung de 3 caractere si mai scurt de 5 caractere
     )
+	{
 	console.log (`Textul "${text}" incepe cu o litera mica sau se termina cu o cifra si are intre 3 si 5 caractere`);
+	}
 
-else {
+	else {
     console.log (`Textul "${text}" nu respecta regulile`);
-}
+	}

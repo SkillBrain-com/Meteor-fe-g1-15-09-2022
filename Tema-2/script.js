@@ -1,7 +1,7 @@
 console.log("Tema2 - EXERCITIUL 1");
 
 let x = 123;
-rest = x % 2;
+const rest = x % 2;
 
 
  if(rest === 0) {             
