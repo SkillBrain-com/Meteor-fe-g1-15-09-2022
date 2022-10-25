@@ -1,6 +1,4 @@
-console.log ("Exercitiul 3 partea a 2 a");
-
-const text = "altceva";
+let text = "altceva";
 
 const lungimeText = text.length;
 const primaLitera = text.charAt(0);
