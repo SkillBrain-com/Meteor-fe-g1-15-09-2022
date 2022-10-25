@@ -1,4 +1,4 @@
-let text = "altceva";
+const text = "altceva";
 
 const lungimeText = text.length;
 const primaLitera = text.charAt(0);
