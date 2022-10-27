@@ -6,12 +6,10 @@ console.log("Structura itertiva");
 
 const n = 100;
 let textNumar = "1";
-let contor = 0;
 
-while (contor < n) {
+for (let contor = 0; contor < n; contor++){
     textNumar += "0";
     console.log(`Contorul este ${contor}`);
-    contor++;
 }
 
 console.log(textNumar);
