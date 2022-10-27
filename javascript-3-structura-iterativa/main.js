@@ -1,9 +1,11 @@
-console.log("Structura itertiva");
+console.log("Structura itertiva si liste");
 
-let suma = 0;
+const list = []; // lista goala
+list.push(10);
+console.log(list);
 
-for (let i = 0; i < 100; i++) {
-    suma += i;
-}
+list.push(20);
+console.log(list);
 
-console.log(suma);
+list.push(30);
+console.log(list);
