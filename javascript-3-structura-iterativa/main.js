@@ -7,24 +7,30 @@ const results = [];
 
 let sumTempMax = 0;
 let sumTempMin = 0;
+let highestTemperature = 0;
 
-for(let i = 0; i < wheatherMaxTempList.length; i++) {
+for (let i = 0; i < wheatherMaxTempList.length; i++) {
     const maxOfTheDay = wheatherMaxTempList[i];
     const minOfTheDay = wheatherMinTempList[i];
     sumTempMax += maxOfTheDay;
     sumTempMin += minOfTheDay;
+
+    if (maxOfTheDay > highestTemperature) {
+        highestTemperature = maxOfTheDay;
+    }
 }
 
 const avgTempMax = sumTempMax / wheatherMaxTempList.length;
 const avgTempMin = sumTempMin / wheatherMinTempList.length;
 const avgTempAvg = (avgTempMax + avgTempMin) / 2;
 
+console.log(`Temperatura maxima este ${highestTemperature}`);
+
 console.log(`Media maximelor este ${avgTempMax}°C`);
 console.log(`Media minimelor este ${avgTempMin}°C`);
 console.log(`Media mediilor este ${avgTempAvg}°C`);
 
-
-for(let i = 0; i < wheatherMaxTempList.length; i++) {
+for (let i = 0; i < wheatherMaxTempList.length; i++) {
     const maxOfTheDay = wheatherMaxTempList[i];
     const minOfTheDay = wheatherMinTempList[i];
 
