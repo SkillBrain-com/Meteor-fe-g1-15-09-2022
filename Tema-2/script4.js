@@ -1,0 +1,1 @@
+console.log("Exercitiul 4")
