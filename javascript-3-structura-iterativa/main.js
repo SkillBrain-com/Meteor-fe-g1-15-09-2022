@@ -1,15 +1,16 @@
-/*
-Algoritm in care sa AFISAM un numar cu cel putin 10 cifre si cel mult 1000 de cifre.
-Numarul va reprezenta o putere a lui 10; Numarul trebuie sa fie afisat cu toate cifrele.
-*/
+// o functie (in programare) este un programel gata facut, 
+// pe care il putem folosi prin ai spune numele urmat de niste paranteze
 console.log("Structura itertiva");
 
-const n = 100;
-let textNumar = "1";
+//numar la intamplare intre 0 si 10
+const secret = Math.round(Math.random() * 10);
+let contor = 0;
 
-for (let contor = 0; contor < n; contor++){
-    textNumar += "0";
-    console.log(`Contorul este ${contor}`);
+while (contor !== secret) {
+    contor += 1;
 }
 
-console.log(textNumar);
+console.log(`Cred ca secretul era ${contor}`);
+console.log(`Secretul este ${secret}`);
+
+
