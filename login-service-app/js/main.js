@@ -29,8 +29,24 @@ function chnagePage(nextPage){
     }
 }
 
-let selectedPage = ROUTES.LOGIN;
+let selectedPage = null;
 let user = null;
+
+if (localStorage.getItem("userEmail") !== null) {
+    user = findUserByEmail(localStorage.getItem("userEmail"));
+
+    //daca cineva a adaugat singur o valoare in local storage?
+
+    firstNameText.innerText = user.firstName;
+    lastNameText.innerText = user.lastName;
+    emailText.innerText = user.email;
+
+    selectedPage = ROUTES.USER;
+}
+else {
+    selectedPage = ROUTES.LOGIN;
+}
+
 
 loginButton.addEventListener("click", function(){
     const email = emailInput.value;
@@ -38,6 +54,7 @@ loginButton.addEventListener("click", function(){
 
     if (authorizeLogin(email, password)){
         user = findUserByEmail(email);
+        localStorage.setItem("userEmail", email);
 
         firstNameText.innerText = user.firstName;
         lastNameText.innerText = user.lastName;
@@ -54,6 +71,7 @@ loginButton.addEventListener("click", function(){
 logoutButton.addEventListener("click", function(){
     user = null;
     loginErrorText.classList.add("hidden");
+    localStorage.removeItem("userEmail");
     selectedPage = ROUTES.LOGIN;
     chnagePage(selectedPage); 
 });
