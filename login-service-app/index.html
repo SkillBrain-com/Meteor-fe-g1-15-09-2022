@@ -36,14 +36,16 @@
             <hr/>
     
             <div>
-                <p>Hello my name is ${firstName} ${lastName}</p>
-                <p>This is my email : ${email}</p>
-                <p>This is my secret : ${secret}</p>
+                <p>Hello my name is <span id="first-name-text"></span> <span id="last-name-text"></span></p>
+                <p>This is my email : <span id="email-text"></span></p>
             </div>
+
+            <button id="logout-button">Logout</button>
         </div>
     </div>
 
     <script src="js/db.js"></script>
+    <script src="js/user-service.js"></script>
     <script src="js/auth-service.js"></script>
     <script src="js/main.js"></script>
 </body>

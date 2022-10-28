@@ -12,6 +12,10 @@ const passwordInput = document.querySelector("#password-input");
 
 /* USER PAGE VARS */
 const userPage = document.querySelector("#user-page");
+const firstNameText = document.querySelector("#first-name-text");
+const lastNameText = document.querySelector("#last-name-text");
+const emailText = document.querySelector("#email-text");
+const logoutButton = document.querySelector("#logout-button");
 
 //nextPage - pagina la care se trece
 function chnagePage(nextPage){
@@ -26,18 +30,32 @@ function chnagePage(nextPage){
 }
 
 let selectedPage = ROUTES.LOGIN;
+let user = null;
 
 loginButton.addEventListener("click", function(){
     const email = emailInput.value;
     const password = passwordInput.value;
 
     if (authorizeLogin(email, password)){
+        user = findUserByEmail(email);
+
+        firstNameText.innerText = user.firstName;
+        lastNameText.innerText = user.lastName;
+        emailText.innerText = user.email;
+
         selectedPage = ROUTES.USER;
         chnagePage(selectedPage);    
     }
     else {
         loginErrorText.classList.remove("hidden");
     }
+});
+
+logoutButton.addEventListener("click", function(){
+    user = null;
+    loginErrorText.classList.add("hidden");
+    selectedPage = ROUTES.LOGIN;
+    chnagePage(selectedPage); 
 });
 
 chnagePage(selectedPage);
