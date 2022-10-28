@@ -1,8 +1,20 @@
 function authorizeLogin(email, password) {
-    if (email === "cezarmocanu@yahoo.com" && password === "123456") {
-        return true;
+    let utilizatorCautat = null;
+    for (let i = 0; i < DB.length; i++) {
+        if (DB[i].email === email) {
+            utilizatorCautat = DB[i];
+        }
     }
-    else {
+
+    if (utilizatorCautat === null) {
+        console.error("Utilizatorul nu exista in DB");
         return false;
     }
+
+    if (password !== utilizatorCautat.password) {
+        console.error("Parola nu este corecta");
+        return false;
+    }
+    
+    return true;
 }
