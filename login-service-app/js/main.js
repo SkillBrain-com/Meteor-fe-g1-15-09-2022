@@ -6,6 +6,9 @@ const ROUTES = {
 /* LOGIN PAGE VARS */
 const loginPage = document.querySelector("#login-page");
 const loginButton = document.querySelector("#login-button");
+const loginErrorText = document.querySelector("#login-error-text");
+const emailInput = document.querySelector("#email-input");
+const passwordInput = document.querySelector("#password-input");
 
 /* USER PAGE VARS */
 const userPage = document.querySelector("#user-page");
@@ -24,10 +27,17 @@ function chnagePage(nextPage){
 
 let selectedPage = ROUTES.LOGIN;
 
-
 loginButton.addEventListener("click", function(){
-    selectedPage = ROUTES.USER;
-    chnagePage(selectedPage);    
+    const email = emailInput.value;
+    const password = passwordInput.value;
+
+    if (email === "cezarmocanu@yahoo.com" && password === "123456"){
+        selectedPage = ROUTES.USER;
+        chnagePage(selectedPage);    
+    }
+    else {
+        loginErrorText.classList.remove("hidden");
+    }
 });
 
 chnagePage(selectedPage);
