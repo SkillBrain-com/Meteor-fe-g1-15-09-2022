@@ -31,7 +31,7 @@ loginButton.addEventListener("click", function(){
     const email = emailInput.value;
     const password = passwordInput.value;
 
-    if (email === "cezarmocanu@yahoo.com" && password === "123456"){
+    if (authorizeLogin(email, password)){
         selectedPage = ROUTES.USER;
         chnagePage(selectedPage);    
     }
