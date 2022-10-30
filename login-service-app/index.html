@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Service App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="login-page" >
+        <div>
+            <h1>Login</h1>
+            <hr/>
+    
+            <div>
+                <div>
+                    <label>Email</label>
+                    <input id="email-input" type="text" />
+                </div>
+                <div>
+                    <label>Password</label>
+                    <input id="password-input" type="password"/>
+                </div>
+                <div>
+                    <p id="login-error-text" class="hidden error-text">Email sau parola incorecta</p>
+                </div>
+
+                <button id="login-button">Login</button>
+            </div>
+        </div>
+    </div>
+    <div id="user-page">
+        <div>
+            <h1>Profile</h1>
+            <hr/>
+    
+            <div>
+                <p>Hello my name is <span id="first-name-text"></span> <span id="last-name-text"></span></p>
+                <p>This is my email : <span id="email-text"></span></p>
+            </div>
+
+            <button id="logout-button">Logout</button>
+        </div>
+    </div>
+
+    <script src="js/db.js"></script>
+    <script src="js/user-service.js"></script>
+    <script src="js/auth-service.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
