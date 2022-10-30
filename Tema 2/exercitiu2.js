@@ -5,7 +5,7 @@ const number = 120;
 if(number < 20){ 
     console.log(`Numarul ${number} are mai putin de doua cifre`)
 }
-if (number < 500000){
+if (number < 50000){
         console.log(`Numarul ${number} este par si are intre 3 si 5 cifre`)
     }
     else {
