@@ -1,4 +1,4 @@
-console.log("Tema 2 - exercitiu 1")
+console.log("Tema 2 - exercitiul 1")
 
 let z = 123;
 const rest = z % 2;
