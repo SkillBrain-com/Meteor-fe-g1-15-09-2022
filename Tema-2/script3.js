@@ -3,9 +3,9 @@ console.log("Exercitiul 3")
 
 const text= " Acesta e un text";
 
-const lungimeText1= text.length;
+const lungimeText1= text.length
 const primaLitera1= text.charAt(0);
-const ultimaLitera1= text.charAt(text.length);
+const ultimaLitera1= text.charAt(5);
 
 if ( primaLitera1 >= "a"  && 
 primaLitera1 <= "z" || ultimaLitera1 >= "0" && ultimaLitera1 <="9" && lungimeText1 >= 3 && lungimeText1 <= 5  ) {
