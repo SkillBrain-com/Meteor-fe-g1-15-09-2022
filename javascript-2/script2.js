@@ -9,7 +9,10 @@ if (numar > 0) {
         if (rest === 0) {
             console.log(`${numar} este par si are intre 3 si 5 cifre`);
         } 
-        else console.log(`${numar} nu este par si are intre 3 si 5 cifre`);
+        else { console.log(`${numar} nu este par si are intre 3 si 5 cifre`);
+      }
     }
-    else console.log(`${numar} are mai mult de 5 cifre`);
+    else {
+        console.log(`${numar} are mai mult de 5 cifre`);
+    }
 }
