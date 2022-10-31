@@ -18,3 +18,13 @@ for ( let i = 0; i < pretCumparareList.length; i++) {
 }
 const avgCump = Math.round(cumpSum / pretCumparareList.length);
 console.log (`Pretul mediul de cumparare al unei masini este de ${avgCump}`);
+
+console.log ("Punctul 3");
+
+pretCumparareList.sort(function(a,b){return a-b});
+let minCump = pretCumparareList[0];
+pretCumparareList.sort(function(a,b){return b-a});
+let maxCump = pretCumparareList[0];
+
+console.log ( `Pretul minim al unei masini este ${minCump}`);
+console.log ( `Pretul maxim al unei masini este ${maxCump}`);
