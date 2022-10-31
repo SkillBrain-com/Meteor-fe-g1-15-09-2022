@@ -12,5 +12,5 @@ for (let i = 0; i < carBuyPrice.length; i++) {
 }
 
 const avgCarBuyPrice = carBuyPriceSum / carBuyPrice.length;
-const avgCarBuyPriceRounded = Math.ceil(avgCarBuyPrice);
+const avgCarBuyPriceRounded = Math.floor(avgCarBuyPrice);
 console.log(`Pretul mediu de cumparare al unei masini este ${avgCarBuyPriceRounded}`);
