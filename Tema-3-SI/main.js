@@ -4,6 +4,12 @@ const marcaList = ["BMW", "Audi", "Dacia", "Audi", "Audi", "Dacia", "Dacia", "Da
 const modelList = ["Seria 1", "A3", "Spring", "Q5", "A4", "Spring", "Docker", "Logan", "X5", "Golf", "Astra", "E 200", "220i", "Golf"];
 const pretCumparareList = [16000, 9000, 17000, 20300, 6000, 8000, 10000, 6000, 35500, 18900, 41000, 22500, 20500, 11590];
 
+//let minPosition = pretCumparareList.indexOf(6000);
+const indexes = pretCumparareList.map((val, idx) => { //pentru Punctul 3 - a
+    console.log(`Index of ${val} is ${idx}`);
+    return idx;
+});
+
 console.log ("Punctul 1");
 
 for (let i = 0; i < marcaList.length; i++) {
@@ -28,3 +34,9 @@ let maxCump = pretCumparareList[0];
 
 console.log ( `Pretul minim al unei masini este ${minCump}`);
 console.log ( `Pretul maxim al unei masini este ${maxCump}`);
+
+console.log ("Punctul 3 - a")
+
+//console.log (`6000 se gaseste la pozitia ` + minPosition);
+console.log (`Masina cu cel mai mic pret de ${minCump} este ${marcaList[4]} ${modelList[4]} si ${marcaList[7]} ${modelList[7]}`);
+console.log (`Masina cu cel mai mare pret de ${maxCump} este ${marcaList[10]} ${modelList[10]}`);
