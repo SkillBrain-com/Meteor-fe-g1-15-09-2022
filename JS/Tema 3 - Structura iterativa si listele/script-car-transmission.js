@@ -6,15 +6,18 @@ console.log(`Cerinta 4`);
 
 const carTransmission = ["Automata", "Manuala", "Automata", "Automata", "Automata", "Manuala", "Manuala", "Manuala", "Automata", "Manuala", "Automata", "Automata", "Manuala", "Automata"];
 
-const manualTransmission = 0;
-const automaticTransmission = 0;
-for( let i = 0; i < carTransmission.length; i++) {
-    if( i === "Manuala") {
-    manualTransmission += manualTransmission;
-    console.log(manualTransmission);
-    }
-    else {
-    automaticTransmission += automaticTransmission;
-    console.log(automaticTransmission);
-    }
+let manualTrasmission = 0;
+let automaticTransmission = 0;
+let manualContor = 0;
+let automaticContor = 0;
+for (let i = 0; i < carTransmission.length; i++) {
+   const manualTrasmission = carTransmission[i];
+   const automaticTransmission = carTransmission[i];
+   if(manualTrasmission === "Manuala") {
+      manualContor += 1;
+   }
+   if(automaticTransmission === "Automata") {
+      automaticContor += 1; 
+   }
 }
+console.log(`Sunt ${manualContor} masini cu transmisie manuala si ${automaticContor} masini cu transmisie automata.`);
