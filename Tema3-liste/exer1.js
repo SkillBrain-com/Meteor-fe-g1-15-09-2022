@@ -25,3 +25,25 @@ for(i=1; i < PretCumparare.length; i++){               //pozitia 0 din lista put
     PretMin = PretCumparare[i];
 }
 console.log(`Pretul minim este ${PretMin}, iar pretul maxim este ${PretMax}`);
+
+//Cerinta 4
+let TransManuala=0,TransAutomata=0;
+const Transmisie = ['Automata','Manuala','Automata','Automata','Automata','Manuala','Manuala','Manuala','Automata','Manuala','Automata','Automata','Manuala','Automata'];
+for(i=0; i < Transmisie.length; i++){
+    if(Transmisie[i]==='Automata')
+    TransAutomata++;
+    if(Transmisie[i]==='Manuala')
+    TransManuala++;
+}
+console.log(`Avem ${TransAutomata} automobile cu transmisie automata si ${TransManuala} cu transmisie manuala`);
+//Extra
+console.log('Cele cu transmisie automata sunt:');
+for(i=0; i < Transmisie.length; i++){
+    if(Transmisie[i]==='Automata')
+    console.log(`${Marca[i]} ${Model[i]};`) 
+}
+console.log('Cele cu transmisie manuale sunt:');
+for(i=0; i < Transmisie.length; i++){
+    if(Transmisie[i]==='Manuala')
+    console.log(`${Marca[i]} ${Model[i]};`) 
+}
