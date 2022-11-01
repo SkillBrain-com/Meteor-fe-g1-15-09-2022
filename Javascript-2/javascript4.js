@@ -12,7 +12,7 @@ console.log(contineLitera);
 console.log(primaCifra);
 console.log(aDouaLitera);
 
-if (lungimeText2===8 && primaCifra>="0" && primaCifra<="9"
+if (lungimeText2===8 && primaCifra>="0" && contineLitera==="@" && primaCifra<="9"
  || aDouaLitera>="a" && aDouaLitera<="z"){
     console.log(`Textul ${text2} respecta regulile`);
  }
