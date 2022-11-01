@@ -15,3 +15,12 @@ console.log(lungimeText1);
 console.log(primaLitera1);
 console.log(ultimaLitera1);
 
+if (primaLitera1>="a" && primaLitera1<="z" ||
+	ultimaLitera1>="0" && ultimaLitera1<="9" &&
+	lungimeText1>=3 && lungimeText1<=5){
+    console.log(`Textul ${text1} incepe cu o litera mica sau se termina
+    cu o cifra si are intre 3 si 5 caractere`)
+    }
+else {
+    console.log(`Textul ${text1} nu respecta regulile`)
+}
