@@ -17,14 +17,14 @@ let avgProfit = 0;
 for (let i = 0; i < BuyPrice.length; i++) {
     sumBuyPrice += BuyPrice[i];
     sumSellPrice += SellPrice[i];
-    avgProfit = (sumSellPrice - sumBuyPrice) / BuyPrice.length;  
+    avgProfit = (sumSellPrice - sumBuyPrice) / BuyPrice.length;
 }
-console.log(avgProfit);
+console.log(`Profitul mediu pentru toate masinile este ${avgProfit}`);
 
 for (let i = 0; i < BuyPrice.length; i++) {
-    //const avgProfit = (sumSellPrice - sumBuyPrice) / BuyPrice.length;
-    if(profit > avgProfit) {
-        
+    const profit = SellPrice[i] - BuyPrice[i];
+    const avgProfit = (sumSellPrice - sumBuyPrice) / BuyPrice.length;
+    if( profit > avgProfit) {
+         console.log(`Profitul pentru ${carMake[i]} ${carModel[i]} este ${profit}.`);
     }
-    console.log(`Profitul pentru ${carMake[i]} ${carModel[i]} este ${profit[i]}.`);
 }
