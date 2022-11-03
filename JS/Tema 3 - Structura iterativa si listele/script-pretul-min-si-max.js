@@ -11,33 +11,19 @@ const carBuyPrice2 = [16000, 9000, 17000, 20300, 6000, 8000, 10000, 6000, 35500,
 const carMake2 = ["BMW", "Audi", "Dacia", "Audi", "Audi", "Dacia", "Dacia", "Dacia", "BMW", "Volkswagen", "Opel", "Mercedes", "BMW", "Volkswagen"]
 const carModel2 = ["Seria 1", "A3", "Spring", "Q5", "A4", "Spring", "Docker", "Logan", "X5", "Golf", "Astra", "E 200", "220i", "Golf"]
 
-let carPrice = 0;
-let carMaxPrice = 0;
-for(i = 0; i < carBuyPrice2.length; i++) {
-    const maxPrice = carBuyPrice2[i];
-    carPrice += maxPrice;
-    if(maxPrice > carMaxPrice) {
-        carMaxPrice = maxPrice;
-    } 
-}
-console.log(`Cea mai scumpa masina costa ${carMaxPrice}.`);
+let minPrice = Infinity;
+let maxPrice = - Infinity;
 
-//console.log(carBuyPrice2.indexOf(carMaxPrice));
-
-console.log(`Cea mai scumpa masina este ${carMake2[carBuyPrice2.indexOf(carMaxPrice)]} ${carModel2[carBuyPrice2.indexOf(carMaxPrice)]} si costa ${carBuyPrice2[carBuyPrice2.indexOf(carMaxPrice)]}.`);
-
-
-let carPrice2 = 0;
-let carMinPrice = 0;
-for(i = 0; i < carBuyPrice2.length; i++) {
-    const minPrice = carBuyPrice2[i];
-    carPrice += minPrice;
-    if(minPrice < carMinPrice) {
-        carMinPrice = minPrice;
+for (let number of carBuyPrice2) {
+    if(number > maxPrice) {
+        maxPrice = number;
+    }
+    if(number < minPrice) {
+        minPrice = number;
     }
 }
-console.log(carMinPrice);
-
-    
-   
-    
+  
+    console.log(minPrice); 
+    console.log(maxPrice);
+    console.log(`Cea mai scumpa masina este ${carMake2[carBuyPrice2.indexOf(maxPrice)]} ${carModel2[carBuyPrice2.indexOf(maxPrice)]} si costa ${carBuyPrice2[carBuyPrice2.indexOf(maxPrice)]}.`);
+    console.log(`Cea mai ieftina masina este ${carMake2[carBuyPrice2.indexOf(minPrice)]} ${carModel2[carBuyPrice2.indexOf(minPrice)]} si costa ${carBuyPrice2[carBuyPrice2.indexOf(minPrice)]}.`);
