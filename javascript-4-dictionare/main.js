@@ -14,10 +14,6 @@ const histogram = {};
 for (let i = 0; i < bazaDeDate.length; i++) {
     const masina = bazaDeDate[i];
 
-    //Acesarea valorilor prin chei si salvearea lor in varibile
-    // const marca = masina.marca;
-    // const transmisie = masina.transmisie;
-
     //Destructurare(selectia) valorilor dintr-un obiect direct in variabile
     const {marca, transmisie} = masina;
 
@@ -32,3 +28,7 @@ for (let i = 0; i < bazaDeDate.length; i++) {
 }
 
 console.log(histogram);
+const keys = Object.keys(histogram); // o lista doar cu cheile din dictionarul nostru
+const values = Object.values(histogram); // o lista doar cu valorile din dictionarul nostru
+console.log(keys);
+console.log(values);
