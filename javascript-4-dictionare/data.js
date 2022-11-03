@@ -1,7 +1,9 @@
-const DIMENSIUNE_ESANTION = 250000;
+const DIMENSIUNE_ESANTION = 2500;
 const MARCI = ["BMW", "Audi", "Opel", "Dacia", "Toyota", "Honda", "Subaru", "Matiz"];
 const TRANSMISII = ["Automata", "Manuala"];
 const COMBUSTIBIL = ["Benzia", "Motorina", "Electrica"];
+const DEALERI = ["Bavaria Auto", "Arges auto", "Car Geroge", "Mihai Carss","Clean Cars Brasov"];
+const ORASE = ["BRASOV", "BUCURESTI", "IASI", "CALARASI", "CONSTANTA"];
 
 /* MASINA - dictionar - object - json(JavaScript Object Notation) - jsol (JavaScript Object Literal)
     {
@@ -11,6 +13,10 @@ const COMBUSTIBIL = ["Benzia", "Motorina", "Electrica"];
         pretCumparare: number;
         pretVanzare: number;
         capacitateCilindrica: number;
+        dealer: {
+            nume: string;
+            oras: string;
+        }
     }
 */
 const bazaDeDate = [];
@@ -28,14 +34,23 @@ for(let i = 0; i < DIMENSIUNE_ESANTION; i++) {
     const pretVanzare = pretCumparare + Math.random() * 5000 + 1000;
     const cc = Math.round(Math.random() * 4000 + 1000);
     
+    const indexNumeDealer = Math.round(Math.random() * (DEALERI.length - 1));
+    const indexOras = Math.round(Math.random() * (ORASE.length - 1));
+
     const masina = {
         marca: MARCI[indexMarca],
         transmisie: TRANSMISII[indexTransmisie],
         combustibil: COMBUSTIBIL[indexCombustibil],
         pretCumparare: pretCumparare,
         pretVanzare: pretVanzare,
-        capacitateCilindrica: cc
+        capacitateCilindrica: cc,
+        dealer: {
+            nume: DEALERI[indexNumeDealer],
+            oras: ORASE[indexOras]
+        }
     };
 
     bazaDeDate.push(masina)
 }
+
+console.log(bazaDeDate)

@@ -6,6 +6,10 @@
         pretCumparare: number;
         pretVanzare: number;
         capacitateCilindrica: number;
+        dealer: {
+            nume: string;
+            oras: string;
+        }
     }
 */
 
@@ -15,9 +19,10 @@ for (let i = 0; i < bazaDeDate.length; i++) {
     const masina = bazaDeDate[i];
 
     //Destructurare(selectia) valorilor dintr-un obiect direct in variabile
-    const {marca, transmisie} = masina;
+    const {marca, dealer} = masina;
+    const {oras} = dealer;
 
-    const cheie = `${marca}-${transmisie}`;
+    const cheie = `${marca}-${oras}`;
 
     if (histogram[cheie] === undefined) {
         histogram[cheie] = 1;
