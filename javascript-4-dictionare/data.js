@@ -1,5 +1,5 @@
-const DIMENSIUNE_ESANTION = 1500;
-const MARCI = ["BMW", "Audi", "Opel", "Dacia", "Toyota", "Honda", "Subaru"];
+const DIMENSIUNE_ESANTION = 250000;
+const MARCI = ["BMW", "Audi", "Opel", "Dacia", "Toyota", "Honda", "Subaru", "Matiz"];
 const TRANSMISII = ["Automata", "Manuala"];
 const COMBUSTIBIL = ["Benzia", "Motorina", "Electrica"];
 
@@ -39,6 +39,3 @@ for(let i = 0; i < DIMENSIUNE_ESANTION; i++) {
 
     bazaDeDate.push(masina)
 }
-
-console.log(bazaDeDate);
-
