@@ -1,26 +1,11 @@
-console.log(marciMasini);
+const carteTelefoane = {};
 
-let countBMW = 0;
-let countAudi = 0;
-let countOpel = 0;
-let countDacia = 0;
+console.log(carteTelefoane);
 
-for (let i = 0; i < marciMasini.length; i++) {
-    if (marciMasini[i] === "Audi") {
-        countAudi++;
-    }
-    if (marciMasini[i] === "Opel") {
-        countOpel++;
-    }
-    if (marciMasini[i] === "Dacia") {
-        countDacia++;
-    }
-    if (marciMasini[i] === "BMW") {
-        countBMW++;
-    }
-}
+carteTelefoane.a = 10;
 
-console.log(`BMW ${countBMW}`);
-console.log(`Audi ${countAudi}`);
-console.log(`Opel ${countOpel}`);
-console.log(`Dacia ${countDacia}`);
+console.log(carteTelefoane);
+
+carteTelefoane["cezar mocanu"] = 20;
+
+console.log(carteTelefoane);
