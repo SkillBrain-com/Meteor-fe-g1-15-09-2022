@@ -1,11 +1,16 @@
-const carteTelefoane = {};
+console.log(marciMasini);
 
-console.log(carteTelefoane);
+const histogram = {};
 
-carteTelefoane.a = 10;
+for (let i = 0; i < marciMasini.length; i++) {
+    const marca = marciMasini[i];
 
-console.log(carteTelefoane);
+    if (histogram[marca] === undefined) {
+        histogram[marca] = 1;
+    }
+    else {
+        histogram[marca]++;
+    }
+}
 
-carteTelefoane["cezar mocanu"] = 20;
-
-console.log(carteTelefoane);
+console.log(histogram);
