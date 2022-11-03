@@ -3,18 +3,11 @@ console.log("EXERCITIUL 3");
 const text="mama";
 const lungimeText=text.length;
 const primaLitera=text.charAt(0);
-console.log(lungimeText);
-console.log(primaLitera);
 
 const text1="Acesta este un text";
 const lungimeText1=text1.length;
 const primaLitera1=text1.charAt(0);
 const ultimaLitera1=text1.charAt(4);
-
-console.log(lungimeText1);
-console.log(primaLitera1);
-console.log(ultimaLitera1);
-
 if (primaLitera1>="a" && primaLitera1<="z" ||
 	ultimaLitera1>="0" && ultimaLitera1<="9" &&
 	lungimeText1>=3 && lungimeText1<=5){
