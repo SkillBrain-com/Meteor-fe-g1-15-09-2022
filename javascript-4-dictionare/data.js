@@ -3,7 +3,7 @@ const MARCI = ["BMW", "Audi", "Opel", "Dacia", "Toyota", "Honda", "Subaru", "Mat
 const TRANSMISII = ["Automata", "Manuala"];
 const COMBUSTIBIL = ["Benzia", "Motorina", "Electrica"];
 
-/* MASINA
+/* MASINA - dictionar - object - json(JavaScript Object Notation) - jsol (JavaScript Object Literal)
     {
         marca: string;
         transmisie: string;
