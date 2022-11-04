@@ -16,7 +16,14 @@ const firstNameText = document.querySelector("#first-name-text");
 const lastNameText = document.querySelector("#last-name-text");
 const emailText = document.querySelector("#email-text");
 const logoutButton = document.querySelector("#logout-button");
-const adminButton = document.querySelector("#admin-button");
+
+const registerForm = document.querySelector("#register-form");
+
+const registerFirstName = document.querySelector("#register-first-name");
+const registerLastName = document.querySelector("#register-last-name");
+const registerEmail = document.querySelector("#register-email");
+const registerPassword = document.querySelector("#register-password");
+const registerButton = document.querySelector("#register-button");
 
 //nextPage - pagina la care se trece
 function chnagePage(nextPage){
@@ -27,6 +34,15 @@ function chnagePage(nextPage){
     else if (nextPage === ROUTES.USER){
         loginPage.classList.add("hidden");
         userPage.classList.remove("hidden");
+    }
+}
+
+function enableRegisterForm(user){
+    if (user.permissions.includes(PERMISSIONS.CAN_ADD_NEW_USER) === false){
+        registerForm.classList.add("hidden");
+    }
+    else{
+        registerForm.classList.remove("hidden");
     }
 }
 
@@ -43,6 +59,7 @@ if (localStorage.getItem("userEmail") !== null) {
     emailText.innerText = user.email;
 
     selectedPage = ROUTES.USER;
+    enableRegisterForm(user);
 }
 else {
     selectedPage = ROUTES.LOGIN;
@@ -62,7 +79,8 @@ loginButton.addEventListener("click", function(){
         emailText.innerText = user.email;
 
         selectedPage = ROUTES.USER;
-        chnagePage(selectedPage);    
+        chnagePage(selectedPage); 
+        enableRegisterForm(user);   
     }
     else {
         loginErrorText.classList.remove("hidden");
@@ -77,9 +95,36 @@ logoutButton.addEventListener("click", function(){
     chnagePage(selectedPage); 
 });
 
-adminButton.addEventListener("click",function(){
-    if (user.permissions.includes(PERMISSIONS.CAN_PRESS_ADMIN_BUTTON)){
-        alert("Hello Admin");
+registerButton.addEventListener("click",function(){
+    if (user.permissions.includes(PERMISSIONS.CAN_ADD_NEW_USER)){
+        
+        //extragem datele
+        const firstName = registerFirstName.value;
+        const lastName =  registerLastName.value;
+        const email =     registerEmail.value;
+        const password =  registerPassword.value;
+
+        if (firstName.length > 0 && lastName.length > 0 && email.length > 3 && password.length > 3){
+            //creem un user
+            const userNou = {
+                firstName: firstName,
+                lastName: lastName,
+                email: email,
+                password: password,
+                permissions: [],
+            };
+
+            //adauga in baza de date
+            pushToDatabase(userNou);
+            alert("Utilizator adaugat");
+            registerFirstName.value = "";
+            registerLastName.value = "";
+            registerEmail.value = "";
+            registerPassword.value = "";
+        }
+        else {
+            alert("Utilzatorul nu este valid");
+        }
     }
     else{
         alert("You are not Admin!");

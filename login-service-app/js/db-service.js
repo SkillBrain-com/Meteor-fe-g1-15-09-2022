@@ -20,7 +20,7 @@ function initializeDB(){
                 email: "admindb@yahoo.com",
                 password: "123456",
                 permissions: [
-                    PERMISSIONS.CAN_PRESS_ADMIN_BUTTON
+                    PERMISSIONS.CAN_ADD_NEW_USER
                 ],
             }
         ];
