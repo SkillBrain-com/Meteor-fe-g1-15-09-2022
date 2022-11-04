@@ -11,3 +11,4 @@ if (cumpararePretMax <= cumpararePretList.length[i])
 }
 
 console.log(`Max este ${cumpararePretMax} si min este ${cumpararePretMin}`);
+
