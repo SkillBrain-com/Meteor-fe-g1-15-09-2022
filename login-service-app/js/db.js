@@ -12,18 +12,21 @@ const DB = [
         firstName: "Gabriel",
         lastName: "Dodi",
         email: "gabrieldodi@yahoo.com",
-        password: "123456"
+        password: "123456",
+        permissions: []
     },
     {
         firstName: "Valeria",
         lastName: "Mihai",
         email: "valeriamihai@yahoo.com",
-        password: "123456"
+        password: "123456",
+        permissions: []
     },
     {
         firstName: "Stefania",
         lastName: "Axinte",
         email: "stefaniaaxinte@yahoo.com",
-        password: "123456"
+        password: "123456",
+        permissions: []
     }
 ];

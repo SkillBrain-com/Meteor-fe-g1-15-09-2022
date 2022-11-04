@@ -78,7 +78,12 @@ logoutButton.addEventListener("click", function(){
 });
 
 adminButton.addEventListener("click",function(){
-    alert("You are admin!");
+    if (user.permissions.includes(PERMISSIONS.CAN_PRESS_ADMIN_BUTTON)){
+        alert("Hello Admin");
+    }
+    else{
+        alert("You are not Admin!");
+    }
 });
 
 chnagePage(selectedPage);
