@@ -36,5 +36,17 @@ function initializeDB(){
         console.log(`DB CREATED ALREADY AT ${initilizationDate}`);
     }
 }
-
+//artificiu pentru simplitudine
 initializeDB();
+
+
+function getDatabase(){
+    //extragem baza de date sub forma unui text din local storage
+    const databaseJsonText = localStorage.getItem(DB_KEY);  
+
+    //transformam baza de date intr-o lista
+    const database = JSON.parse(databaseJsonText);
+
+    return database;
+}
+

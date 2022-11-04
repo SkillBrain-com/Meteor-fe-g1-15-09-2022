@@ -1,8 +1,9 @@
 function findUserByEmail(email){
     let utilizatorCautat = null;
-    for (let i = 0; i < DB.length; i++) {
-        if (DB[i].email === email) {
-            utilizatorCautat = DB[i];
+    const db = getDatabase();
+    for (let i = 0; i < db.length; i++) {
+        if (db[i].email === email) {
+            utilizatorCautat = db[i];
         }
     }
 
