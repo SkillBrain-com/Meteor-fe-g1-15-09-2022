@@ -50,3 +50,15 @@ function getDatabase(){
     return database;
 }
 
+//primeste un nou utilizator
+function pushToDatabase(user){
+    //se citeste baza de date existenta si se adauga intr-o lista noua
+    const newDb = getDatabase();
+
+    //in lista noua adaugam utilizatorul nou
+    newDb.push(user);
+    
+    //resalvam baza de date
+    const dbString = JSON.stringify(newDb);
+    localStorage.setItem(DB_KEY, dbString);
+}
