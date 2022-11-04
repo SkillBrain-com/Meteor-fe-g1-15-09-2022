@@ -16,6 +16,7 @@ const firstNameText = document.querySelector("#first-name-text");
 const lastNameText = document.querySelector("#last-name-text");
 const emailText = document.querySelector("#email-text");
 const logoutButton = document.querySelector("#logout-button");
+const adminButton = document.querySelector("#admin-button");
 
 //nextPage - pagina la care se trece
 function chnagePage(nextPage){
@@ -74,6 +75,10 @@ logoutButton.addEventListener("click", function(){
     localStorage.removeItem("userEmail");
     selectedPage = ROUTES.LOGIN;
     chnagePage(selectedPage); 
+});
+
+adminButton.addEventListener("click",function(){
+    alert("You are admin!");
 });
 
 chnagePage(selectedPage);

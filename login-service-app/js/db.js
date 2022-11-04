@@ -3,7 +3,10 @@ const DB = [
         firstName: "Cezar",
         lastName: "Mocanu",
         email: "cezarmocanu@yahoo.com",
-        password: "123456"
+        password: "123456",
+        permissions: [
+            PERMISSIONS.CAN_PRESS_ADMIN_BUTTON
+        ],
     },
     {
         firstName: "Gabriel",
