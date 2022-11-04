@@ -1,17 +1,22 @@
 console.log("Exercitiul 4")
 
-const transmisie=["Automata", "Manuala", "Automata", "Automata", "Automata", "Manuala", 
+const transmisieList=["Automata", "Manuala", "Automata", "Automata", "Automata", "Manuala", 
 "Manuala", "Manuala", "Automata", "Manuala", "Automata", "Automata", "Manuala", "Automata"];
-
+const marcaList1= ["BMW", "Audi", "Dacia", "Audi", "Audi", "Dacia", "Dacia", "Dacia", "BMW", "Volkswagen", "Opel", "Mercedes", "BMW", "Volkswagen"]
 let transmisieAutomata= 0;
 let transmisieManuala=0;
 
-for( let i= 0; i < transmisie.length; i++) {
-    if ( transmisie[i]=== "Automata")
+for( let i= 0; i < transmisieList.length; i++) {
+    if ( transmisieList[i]=== "Automata")
     transmisieAutomata++ ; 
 
-    if (transmisie[i]=== "Manuala");
+    if (transmisieList[i]=== "Manuala");
     transmisieManuala++ 
 }
 
 console.log(`Masini cu transmisie automata sunt ${transmisieAutomata} iar cu transmisie manuala ${transmisieManuala}`);
+
+
+
+
+

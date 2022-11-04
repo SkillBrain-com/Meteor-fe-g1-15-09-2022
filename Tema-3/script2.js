@@ -8,5 +8,5 @@ for ( let i= 0; i < pretCumparareList.length; i++) {
     pretSum+= pretCumparareList[i];
 
 }
-const avgpret= pretSum / pretCumparareList.length;
+const avgPret= pretSum / pretCumparareList.length;
 console.log (`Pretul mediu din ${pretCumparareList.length}  este ${avgpret} `);
