@@ -1,6 +1,6 @@
 console.log("Tema2 - EXERCITIUL 4");
 
-const alDoileaText = "mari@ana";
+const alDoileaText = "mari@anaa";
 
 
 lungimeText = alDoileaText.length;
