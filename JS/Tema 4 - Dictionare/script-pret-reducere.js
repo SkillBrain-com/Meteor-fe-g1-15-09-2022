@@ -13,5 +13,4 @@ for (let i = 0; i < BAZA_DE_DATE.length; i++) {
     if(discount > 15) {
         console.log(`Produsul ${BAZA_DE_DATE[i].nume} are reducere de ${discount}% si costa ${PriceAfterDiscount}.`);
     }
-    
 }
