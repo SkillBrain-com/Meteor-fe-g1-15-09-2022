@@ -1,3 +1,5 @@
+console.log("Exercitiul 7");
+
 let count2 = 0;
 
 for (let i=0; i<BAZA_DE_DATE.length; i++) {

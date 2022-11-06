@@ -1,3 +1,4 @@
+console.log("Exercitiul 3");
 
 let count = 0;
 

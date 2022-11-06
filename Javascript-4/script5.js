@@ -1,3 +1,5 @@
+console.log("Exercitiul 5");
+
 let reducereMare;
 let pozitieArticolReducereMare = 0;
 for (let i=0; i<BAZA_DE_DATE.length; i++) {
