@@ -10,7 +10,3 @@ for (let i = 0; i < BAZA_DE_DATE.length; i++) {
     }
 }
 console.log(`Sunt ${sizeLAndXL} articole dispoibile in marimea L si XL.`);
-
-
-//const dimensiuni = BAZA_DE_DATE[1].dimensiuni; 
-//console.log(dimensiuni);
