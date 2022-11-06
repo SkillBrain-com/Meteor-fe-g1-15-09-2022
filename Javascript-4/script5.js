@@ -17,4 +17,4 @@ for (let i=0; i<BAZA_DE_DATE.length; i++) {
 
 const reducerea = (BAZA_DE_DATE[pozitieArticolReducereMare].procentReducere * BAZA_DE_DATE[pozitieArticolReducereMare].pret)/100;
 const pretFinalRedus = BAZA_DE_DATE[pozitieArticolReducereMare].pret - reducerea;
-console.log(`${BAZA_DE_DATE[pozitieArticolReducereMare].nume} cu reducerea: ${reducerea} cu pretul redus: ${pretFinalRedus}`)
+console.log(`${BAZA_DE_DATE[pozitieArticolReducereMare].nume} cu reducerea: ${reducereMare} cu pretul redus: ${pretFinalRedus}`)
