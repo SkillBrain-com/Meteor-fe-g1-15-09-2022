@@ -14,3 +14,21 @@ for (let i = 0; i < carTransmision.length; i ++) {
     }
 }
  console.log(`Cu Transmisie manuala sunt: ${manualTrans} masini, iar cu transmisie automata sunt: ${automaticTrans} masini.`)
+
+ console.log("Exercitiul 4 extra");
+
+ console.log("Cu transmisie manuala avem urmatoarele modele:");
+
+ for (let i = 0; i < carTransmision.length; i ++) {
+    if (carTransmision[i] === "Manuala") {
+        console.log(`${carName[i]} ${carModel[i]} `);
+    }
+ }
+
+ console.log("Cu Transmisie automata avem urmatoarele modele:");
+
+ for (let i = 0; i < carTransmision.length; i++) {
+    if(carTransmision[i] === "Automata") {
+        console.log(`${carName[i]} ${carModel[i]}`);
+    }
+ }
