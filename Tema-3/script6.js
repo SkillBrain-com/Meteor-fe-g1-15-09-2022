@@ -8,3 +8,5 @@ for( let i=0; i< pretCumparareList.length; i++) {
 const avgProfit= mediaProfit/pretCumparareList.length;
 console.log(`Profitul mediu este ${avgProfit}`);
 
+
+
