@@ -22,7 +22,7 @@ const showHelloWorld = () => {
     console.log("Hello world");
 };
 
-sayMyName("Diana");
-sayMyNameArrow("Cezar");
-sayMyNameNoName("Cristian");
-showHelloWorld();
+// sayMyName("Diana");
+// sayMyNameArrow("Cezar");
+// sayMyNameNoName("Cristian");
+// showHelloWorld();
