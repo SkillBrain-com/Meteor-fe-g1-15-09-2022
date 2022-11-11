@@ -9,30 +9,23 @@ function squareNumberWithReturn(nr) {
     return square;
 }
 
+const square = (nr) => nr * nr;
+
 //EXEMPLU 1
 // const rezultatVoid = squareNumber(25);
 // const rezultatReturnNumber = squareNumberWithReturn(10);
 // console.log(rezultatVoid);
 // console.log(rezultatReturnNumber);
 
+const a = (text) => text + "a";
 
-const a = (text) => {
-    return text + "a";
-}
+const b = (text) => text + "bb";
 
-const b = (text) => {
-    return text + "bb";
-}
-
-const c = (text) => {
-    return text + "ccc";
-}
+const c = (text) => text + "ccc";
 
 const t = "abcd";
-//abcdccc
-//abcdcccbb
-//
-const rezulat = a(b(c(t)));
+
+const rezulat = b(a(c(t)));
 console.log(rezulat);
 
 
