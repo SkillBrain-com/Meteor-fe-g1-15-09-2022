@@ -25,8 +25,8 @@ const c = (text) => text + "ccc";
 
 const t = "abcd";
 
-const rezulat = b(a(c(t)));
-console.log(rezulat);
+// const rezulat = b(a(c(t)));
+// console.log(rezulat);
 
 
 
