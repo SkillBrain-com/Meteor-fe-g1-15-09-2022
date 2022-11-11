@@ -1,11 +1,4 @@
-let a = 10;
-let b = 20;
-let rezultat = a + b;
-
-console.log(rezultat);
-
-
-//DECLARAREA FUNCTIEI 
+//DECLARAREA FUNCTIEI - FUNCTION DECLARATION
 // - CUM SE CHEAMA FUNCTIA?
 // - CE PARAMETRII ARE FUNCTIA(DATE DE INTRARE)?
 // - CUM FUNCTIONEAZA?
@@ -20,18 +13,21 @@ function sum(a, b) {
     console.log(rezultat);
 }
 
-/* APELAM FUNCTIA
+/* APELAM FUNCTIA - FUNCTION CALL
     - specificam functia care va fi apelata
     - specificam ce valori vor lua parametrii
     (argumente - valorile preluate de parametrii in momentul apelarii)
 */
-sum(10, 20);
-sum(40, 20);
 
-const y = 50;
-const z = 100;
 
-sum(y, z);
+
+// sum(10, 20);
+// sum(40, 20);
+
+// const y = 50;
+// const z = 100;
+
+// sum(y, z);
 
 
 
