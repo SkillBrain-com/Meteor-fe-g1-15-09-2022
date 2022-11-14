@@ -10,4 +10,4 @@ pretRedMax= pret-pret*reducerePret/100;
 numeArtRedMax=numeArticol;
 }
 }
-console.log(`Articoulul ${numeArtRedMax} are cea mai mare reducere, de ${reducereMax}%, pretul final fiind ${Math.round(pretRedMax)}`)
+console.log(`Articoulul ${numeArtRedMax} are cea mai mare reducere, de ${reducereMax}%, pretul final fiind ${Math.round(pretRedMax)}`);

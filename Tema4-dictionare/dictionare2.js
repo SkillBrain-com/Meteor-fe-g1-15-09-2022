@@ -10,4 +10,4 @@ else{
 }
 
 }
-console.log(histogram2)
+console.log(histogram2);
