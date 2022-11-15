@@ -3,6 +3,8 @@ function main() {
     const v2 = "W@rl is not my passowrd";
   
     // myLibraryFunction("null", "undefined"); 
-    welcomeMessage("Serban Andrei");
+    // welcomeMessage("Serban Andrei");
+    const firstLetter = findFirstLetter(["Ana" , "Maria", "Luci", "Nicu", "Antonia", "Gica", "Cristina"], "A");
+    console.log(firstLetter);
   }
   main();
