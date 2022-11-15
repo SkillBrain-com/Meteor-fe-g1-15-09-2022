@@ -7,5 +7,6 @@ function main() {
     // const firstLetter = findFirstLetter(["Ana" , "Maria", "Luci", "Nicu", "Antonia", "Gica", "Cristina"], "A");
     // console.log(firstLetter);
     console.log(selecteazaDupaCantitate(PRODUSE, 49));
+    console.log(PRODUSE);
   }
   main();

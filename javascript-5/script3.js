@@ -10,3 +10,13 @@ function selecteazaDupaCantitate(listaProduse, limita) {
     }
     return returnList;
 }
+
+function selecteazaPreturile(listaProduse) {
+    const returnList = [];
+    for (let i = 0; i < listaProduse.length; i++) {
+        const produs = listaProduse[i];
+        const {cantitate, pret} = produs;
+        returnList.push(cantitate*pret);
+    }
+    return returnList;
+}
