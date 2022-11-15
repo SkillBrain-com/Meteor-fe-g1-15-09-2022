@@ -30,3 +30,23 @@
 // for(let i = 0;i < listaObiecte.length; i++) {
 //     console.log(listaObiecte[i].departament);
 // }
+
+/****************************************************************** */
+/** Ce pot folos intr-o functie*/
+/****************************************************************** */
+
+// function main() {
+//     const values = [1,2,3,4,5,6];
+
+//     function sumList(list) {
+//         let sum = 0;
+//         for (let i = 0;i < list.length; i++) {
+//             sum += list[i];
+//         }
+//         return sum;
+//     }
+
+//     console.log(sumList(values));
+// }
+
+// main();
