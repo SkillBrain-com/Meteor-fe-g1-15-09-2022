@@ -4,7 +4,8 @@ function main() {
   
     // myLibraryFunction("null", "undefined"); 
     // welcomeMessage("Serban Andrei");
-    const firstLetter = findFirstLetter(["Ana" , "Maria", "Luci", "Nicu", "Antonia", "Gica", "Cristina"], "A");
-    console.log(firstLetter);
+    // const firstLetter = findFirstLetter(["Ana" , "Maria", "Luci", "Nicu", "Antonia", "Gica", "Cristina"], "A");
+    // console.log(firstLetter);
+    console.log(selecteazaDupaCantitate(PRODUSE, 49));
   }
   main();
