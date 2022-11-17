@@ -46,7 +46,10 @@ const DOM = {
                                 {
                                     nodeName: "h1",
                                     innerText: "Heading 1",
-                                    id: "targetHeading"
+                                    id: "targetHeading",
+                                    listeners: [
+                                        
+                                    ]
                                 },
                                 {
                                     nodeName: "h1",

@@ -1,3 +1,8 @@
-const element = document.querySelector("#targetHeading");
+const targetHeading = document.querySelector("#targetHeading");
 
-element.innerText = "Metero Skillbrains";
+let clickCount = 0;
+
+targetHeading.addEventListener("click", function() {
+    clickCount++;
+    targetHeading.innerText = `Metero Skillbrains ${clickCount}`;
+});
