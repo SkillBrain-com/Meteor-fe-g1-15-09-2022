@@ -41,9 +41,11 @@ butonClaculeaza.addEventListener("click", function(){
 
     if (input1Data.error !== null) {
         errorText.innerText = input1Data.error;
+        errorText.style.color = "#ff0000";
     }
     else if (input2Data.error !== null) {
         errorText.innerText = input2Data.error;
+        errorText.style.color = "#ff0000";
     }
     else {
         errorText.innerText = "";
