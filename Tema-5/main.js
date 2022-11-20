@@ -106,6 +106,35 @@ function nameAndInitial(nameList, letter) {
        console.log(selecteazaPreturile(PRODUSE));
 
 
+       console.log( "Cerinta 3c");
+
+       function calculeazaValoareaMedie(listaProduse){
+        let sum=0;
+        let count=0;
+
+        for (let i=0; i< listaProduse.length; i++){
+
+            const produs= listaProduse[i];
+            const {pret, cantitate}= produs;
+            if (cantitate > 0){
+                const value= pret*cantitate;
+                sum+=value;
+                count++;
+
+                 
+
+            }
+        }
+             return sum/count;
+       }
+
+       const valoareaMedie= calculeazaValoareaMedie(PRODUSE);
+       console.log(valoareaMedie);
+      
+
+    
+
+
 
 
 
