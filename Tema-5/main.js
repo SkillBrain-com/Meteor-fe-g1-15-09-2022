@@ -38,6 +38,77 @@ function nameAndInitial(nameList, letter) {
     nameAndInitial(nameList, "B");
     nameAndInitial(nameList, "D");
     nameAndInitial(nameList, "C");
+
+
+    console.log("Cerinta 3a");
+
+  const PRODUSE = [
+    {
+        nume: "Apa",
+        pret: 7,
+        cantitate: 1,
+    },
+    {
+        nume: "Mure",
+        pret: 11,
+        cantitate: 12,
+    },
+    {
+        nume: "Ciocolata",
+        pret: 20,
+        cantitate: 0,
+    },
+    {
+        nume: "Gem",
+        pret: 15,
+        cantitate: 50,
+    },
+    {
+        nume: "Prune",
+        pret: 12,
+        cantitate: 0,
+    },
+    {
+        nume: "Banane",
+        pret: 11,
+        cantitate: 13,
+    },
+]
+     function selecteazaDupaCantitate(listaProduse, limita){
+        const returnProduct=[];
+        for (let i=0; i < listaProduse.length; i++) {
+              const produs=listaProduse[i];
+              const {cantitate}=produs;
+              if (cantitate > limita) {
+                returnProduct.push(produs);
+              }
+        }
+        return (returnProduct);
+     }
+    console.log(selecteazaDupaCantitate(PRODUSE, 12));
+    console.log(selecteazaDupaCantitate(PRODUSE, 51))
+
+
+            console.log("Cerinta 3b");
+
+
+      function selecteazaPreturile(listaProduse){
+        returnNewList=[];
+        for (let i=0; i<listaProduse.length;i++){
+            const produs= listaProduse[i];
+            const {cantitate, pret}=produs;
+            const value= pret * cantitate;
+            returnNewList.push(value);
+        }
+       return (returnNewList);
+
+      }
+       console.log(selecteazaPreturile(PRODUSE));
+
+
+
+
+
     
 
 
