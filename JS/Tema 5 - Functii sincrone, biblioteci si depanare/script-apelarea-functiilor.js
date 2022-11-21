@@ -27,7 +27,7 @@ Pentru lista [Ana, Maria, Luci, Nicu, Antonia, Gica, Cristina] si
 const list = ["Andreea", "Simona", "Lara", "Adina", "Larisa", "Elena", "Iris"];
 
 function nameByInilial(nameList, letter) {
-  const returnName = [];
+  let returnName = [];
   for (let i = 0; i < nameList.length; i++) {
     let firstLetter = nameList[i].charAt(0);
     if (firstLetter === letter) {

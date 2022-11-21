@@ -4,11 +4,7 @@ console.log(`Exercitiul 3a`);
 /* 3. Se da o lista de produse aflate in gestiunea unui supermarket. 
 Un produs este definit de nume, pret, cantitate disponibila. 
 Declara functii pentru cerintele de mai jos si apoi apeleaza-le pentru a le testa.
-Verifica daca ai acoperit toate cazurile.
-
-a) Construieste o functie numita selecteazaDupaCantitate care primeste 
-doi parametri listaProduse si limita care sa returneze toate produsele 
-din lista primita care au cantitatea mai mare decat limita. */
+Verifica daca ai acoperit toate cazurile.*/
 
 const PRODUSE = [
   {
@@ -43,16 +39,23 @@ const PRODUSE = [
   },
 ];
 
+/*a) Construieste o functie numita selecteazaDupaCantitate care primeste 
+doi parametri listaProduse si limita care sa returneze toate produsele 
+din lista primita care au cantitatea mai mare decat limita. */
+
 function selecteazaDupaCantitate(listaProduse, limita) {
   let listaProdusePesteLimita = [];
   for (let i = 0; i < listaProduse.length; i++) {
     if (listaProduse[i].cantitate > limita) {
       listaProdusePesteLimita.push(listaProduse[i]);
-      console.log(listaProduse[i]);
     }
   }
+  const rezultat = listaProdusePesteLimita;
+  console.log(rezultat);
 }
 selecteazaDupaCantitate(PRODUSE, 10);
+
+//////////////////////////////////////////////////////////////////////////////////////////////
 
 console.log(`Tema 5 - Apelarea functiilor`);
 console.log(`Exercitiul 3b`);
@@ -71,3 +74,32 @@ function selecteazaPreturile(listaProduse) {
   console.log(totalPret);
 }
 selecteazaPreturile(PRODUSE);
+
+//////////////////////////////////////////////////////////////////////////////////////////
+
+console.log(`Tema 5 - Apelarea functiilor`);
+console.log(`Exercitiul 3c`);
+
+/* c) Construieste o functie numita calculeazaValoareMedie care primeste un parametru
+listaProduse. Functia va returna media valorii totale a produselor care au cantitatea
+mai mare ca 0.
+In cazul in care listaProduse este goala sau nu are nici un produs cu cantitatea mai
+mare ca 0 va returna valoarea 0. Foloseste functiile de la punctele a si b pentru
+a reduce codul scris. */
+
+function calculeazaValoareMedie(listaProduse) {
+  let medieProduseCuStoc = 0;
+  let nrProduseCuStoc = 0;
+  for (let i = 0; i < listaProduse.length; i++) {
+    const produs = listaProduse[i];
+    const { pret, cantitate } = produs;
+    if (cantitate > 0) {
+      const value = pret * cantitate;
+      medieProduseCuStoc += value;
+      nrProduseCuStoc++;
+    }
+  }
+  return medieProduseCuStoc / nrProduseCuStoc;
+}
+const valoareMedie = calculeazaValoareMedie(PRODUSE);
+console.log(valoareMedie);
