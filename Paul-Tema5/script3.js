@@ -45,3 +45,19 @@ function sortByQuantity (listaProduse, limita) {
 }
 sortByQuantity(PRODUSE , 1)
 
+//b) Construieste o functie numita selecteazaPreturile care primeste un parametru listaProduse care returneaza o noua lista care va contine valoarea fiecarui produs din listaProduse. Valoarea se calculeaza inmultind cantitateaDisponibila cu pretul.
+//In cazul in care functia primeste ca argument o lista goala, va returna o lista goala;
+
+function selecteazaPreturile (listaProduse) {
+    const newList = [];
+    for (let i = 0; i < listaProduse.length; i ++) {
+      const control = listaProduse[i];
+      const quantity = control.cantitate;
+      const price = control.pret;
+      const value = price * quantity;
+      newList.push(value);
+    }
+    console.log(newList);
+  }
+  selecteazaPreturile(PRODUSE);
+
