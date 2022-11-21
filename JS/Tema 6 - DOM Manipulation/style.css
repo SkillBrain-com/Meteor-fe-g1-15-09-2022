@@ -1,0 +1,88 @@
+body {
+    background-color: #fcfcfc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.fereastra_retragere {
+    position: relative;
+    height: 500px;
+    width: 400px;
+    background-color: #FFFFFF;
+    border: solid #9a9a9a 2px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+.date_cont{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: flex-start;
+    padding: 30px;
+}
+
+.logo_banca {
+    position: relative;
+    display: flex;
+}
+.logo {
+    color: #2196f3;
+    size: 20px;
+}
+.bank_text {
+    padding-left: 10px;
+}
+.text {
+    font-size: 12px;
+    margin-top: -10px;
+}
+.detalii_cont {
+ position: relative;
+ display: flex;
+ flex-direction: column;
+}
+.detalii_suma_disponibila {
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    margin-top: -35px;
+}
+.moneda {
+    color: #2196f3;
+    margin-left: 10px;
+}
+
+.valoare {
+    border-radius: 5px;
+    font-size: larger;
+    font-weight: 700;
+}
+.Error {
+    color: #F50057;
+}
+
+.detalii_retragere {
+    margin-top: 20px;
+    line-height: 0px;
+}
+
+.buton_retragere {
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+.retragere {
+    background-color: #2196f3;
+    height: 30px;
+    width: 350px;
+    color: #FFFFFF;
+    font-size: 15px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    border-color: #2196f3;
+}
