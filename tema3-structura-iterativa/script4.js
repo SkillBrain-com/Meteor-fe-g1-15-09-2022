@@ -3,7 +3,7 @@ const carTransmision = ["Automata","Manuala","Automata","Automata","Automata","M
 let manualTrans = 0;
 let automaticTrans = 0;
 let i = 0;
-for (let i = 0; i < carTransmision.length; i ++) {
+for (let i = 0; i < carTransmision.length; i++) {
     if (carTransmision[i] === "Automata") {
     automaticTrans +=1;
     }
@@ -13,6 +13,7 @@ for (let i = 0; i < carTransmision.length; i ++) {
 }
  console.log(`Cu Transmisie manuala sunt: ${manualTrans} masini, iar cu transmisie automata sunt: ${automaticTrans} masini.`)
 
+ 
  console.log("Exercitiul 4 extra");
 
  console.log("Cu transmisie manuala avem urmatoarele modele:");
