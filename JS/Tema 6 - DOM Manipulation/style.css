@@ -62,8 +62,9 @@ body {
     font-size: larger;
     font-weight: 700;
 }
-.Error {
+.errorText {
     color: #F50057;
+    font-size: 12px;
 }
 
 .detalii_retragere {
@@ -85,4 +86,18 @@ body {
     border-radius: 10px;
     margin-bottom: 20px;
     border-color: #2196f3;
+    cursor: pointer;
+    
 }
+
+.retragere:disabled {
+    background-color: #9a9a9a;
+}
+
+@media screen and (max-width: 768px) {
+    /* For mobile phones: */
+   .fereastra_retragere {
+        height: 600px;
+        width: 400px;
+  }
+} 
