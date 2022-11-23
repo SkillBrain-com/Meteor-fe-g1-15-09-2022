@@ -4,6 +4,9 @@ const butonClaculeaza = document.querySelector("#butonClaculeaza");
 const textRezultat = document.querySelector("#textRezultat");
 const errorText1 = document.querySelector("#errorText1");
 const errorText2 = document.querySelector("#errorText2");
+const winText = document.querySelector("#winText");
+
+const secret = Math.round(Math.random() * 20 + 1);
 
 function sum(a, b) {
     return a + b;
@@ -56,5 +59,20 @@ butonClaculeaza.addEventListener("click", function () {
 
     const rezultat = sum(input1Data.value, input2Data.value);
 
-    textRezultat.innerText = rezultat.toFixed(2);
+    textRezultat.innerText = rezultat.toFixed(0);
+
+    winText.className = "";
+    if(rezultat > secret) {
+        winText.innerText = "Numarul este prea mare";        
+        winText.classList.add("orange-text");
+    }
+    else if(rezultat < secret){
+        winText.innerText = "Numarul este prea mic";
+        winText.classList.add("orange-text");
+    }
+    else{
+        winText.innerText = "Ai castigat";
+        winText.classList.add("green-text");
+    }
+
 });
