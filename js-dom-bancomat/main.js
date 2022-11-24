@@ -31,3 +31,16 @@ function verificaSumaRetragere(sumaRetrasa, sold) {
     
     return null;
 }
+
+/** CONTROLLER */
+function controllerButonRetragere(){
+    const sumaRetragere = getValueFromInput(inputSumaRetragere);
+    const textEroare = verificaSumaRetragere(sumaRetragere, sumaDisponibila);
+
+    if (textEroare !== null) {
+        setModel(sumaDisponibila, textEroare);
+    }
+    else {
+        setModel(sumaDisponibila - sumaRetragere, null);
+    }
+}
