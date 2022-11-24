@@ -44,3 +44,15 @@ function controllerButonRetragere(){
         setModel(sumaDisponibila - sumaRetragere, null);
     }
 }
+
+
+/** VIEW */
+function afiseaza(){
+    textSumaDisponila.innerText = `${sumaDisponibila} RON`;
+    if (eroare !== null) {
+        textEroare.innerText = eroare;
+    }
+    else {
+        textEroare.innerText = "";
+    }
+}
