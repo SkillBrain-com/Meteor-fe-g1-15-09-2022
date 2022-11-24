@@ -56,3 +56,17 @@ function afiseaza(){
         textEroare.innerText = "";
     }
 }
+
+
+/** VIEW - EVENT LISTENERS */
+
+butonRetragere.addEventListener("click", function(){
+    controllerButonRetragere();
+    afiseaza();
+});
+
+
+/*INITIALIZARE */
+sumaDisponibila = 500;
+eroare = null;
+afiseaza();
