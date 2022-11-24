@@ -8,21 +8,5 @@ const butonRetragere = document.querySelector("#butonRetragere");
 let sumaDisponibila = 500;
 let eroare = null;
 
-/** VIEW */
 
-/** VIEW - EVENT LISTENERS */
-
-/** CONTROLLER */
-
-function verificaSumaRetragere(sumaRetrasa, sold) {
-    if (sumaRetrasa > sold) {
-        return "Suma retrasa nu poate fi mai mare ca soldul";
-    }
-    
-    if (sumaRetrasa < 5) {
-        return "Suma retrasa nu poate fi mai mica decat 5 lei";
-    }
-    
-    return null;
-}
 
