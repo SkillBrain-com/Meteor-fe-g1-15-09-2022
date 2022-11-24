@@ -21,11 +21,11 @@ un criteriu nu este validat se va afisa un mesaj de eroare corespunzator:
   De asemenea se va afisa si mesajul de eroare sub input.*/
 
 let sumaDisponibila = document.querySelector(".suma_disponibila");
-let sold = sumaDisponibila.value;
 let valoare = document.querySelector(".valoare");
 let retragere = document.querySelector(".retragere");
 let errorText = document.querySelector(".errorText");
 sumaDisponibila.innerText = 500;
+//let sold = Number(sumaDisponibila.value);
 //Math.ceil(Math.random() * 1000);
 
 let sumaRamasa = 0;
@@ -34,12 +34,12 @@ function retragereBani(sold, sumaRetragere) {
   sold = sumaDisponibila.innerText;
   if (sumaRetragere == " ") {
     errorText.innerText = "campul nu poate fi gol";
-  } else if (sumaRetragere < 5 && sumaRetragere != " ") {
+  } else if (sumaRetragere < 5) {
     errorText.innerText = "suma retrasa nu poate fi mai mica de 5 lei";
   } else if (sumaRetragere > sold) {
     errorText.innerText =
       "suma retrasa nu trebuie sa depaseasca suma disponibila";
-  } else if (sumaRetragere < sold && sumaRetragere > 4) {
+  } else if (sumaRetragere <= sold && sumaRetragere > 4) {
     sumaRamasa = sold - sumaRetragere;
     //console.log(sumaRamasa);
     soldNou = sumaRamasa;
@@ -57,8 +57,9 @@ retragere.addEventListener("click", function () {
 
 valoare.addEventListener("keyup", () => {
   if (
-    (valoare.value.length =
-      0 || valoare.value < 5 || valoare.value > sumaDisponibila.value)
+    valoare.value.length === 0 ||
+    valoare.value < 5 ||
+    valoare.value > sumaDisponibila.value
   )
     retragere.disabled = true;
   else retragere.disabled = false;
