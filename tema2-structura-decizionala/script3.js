@@ -10,8 +10,8 @@ const lastLetterIsaDigit = lastLetter >= 0 && lastLetter <= 9
 let message
 
 if (lengthIsValid && (firstLetterIsMinuscule || lastLetterIsaDigit)) {
-    console.log(`Textul ${text} este valid`)
+    console.log(`Textul ${text} incepe cu o litera mica sau se termina cu o cifra si are intre 3 si 5 caractere`)
 } else {
-    console.log(`Textul ${text} nu este valid`)
+    console.log(`Textul ${text} nu respecta regulile`)
 }
 
