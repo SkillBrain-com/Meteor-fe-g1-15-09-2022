@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <title>Bancomat</title>
+</head>
+<body>
+    <div class="fereastra_retragere">
+        <div class="date_cont">
+            <div class="logo_banca">
+                <h1 class="logo">METEOR</h1>
+                <h1 class="bank_text">BANK</h1>
+            </div>
+            <div>
+                <p class="text">Mai jos ai suma disponibila in contul tau la momentul acesta.<br>
+                Adauga sumape care doresti sa o retragi din cont si apasa <br>
+                butonul retrage.
+                </p>
+            </div>
+            <div class="detalii_cont">
+                <h3>Suma disponibila</h3>
+                <div class="detalii_suma_disponibila">
+                    <h2 id="textSumaDisponila"></h2>
+                    <h2 class="moneda">RON</h2>
+                </div>
+                
+            </div>
+            <div class="detalii_retragere">
+                <h3>Suma dorita pentru retragere</h3>
+                <input id="inputSumaRetragere" type="text"/>
+                <h3 id="textEroare"></h3>
+            </div>
+        </div>
+        <div class="buton_retragere">
+            <button id="butonRetragere">RETRAGE SUMA</button>
+        </div> 
+    </div>
+    <script src="script-bancomat-corectat.js"></script>
+</body>
+</html>
