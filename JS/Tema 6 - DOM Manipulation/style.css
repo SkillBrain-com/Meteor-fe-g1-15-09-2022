@@ -62,7 +62,7 @@ body {
     font-size: larger;
     font-weight: 700;
 }
-.errorText {
+#textEroare {
     color: #F50057;
     font-size: 12px;
 }
@@ -77,7 +77,7 @@ body {
     display: flex;
     justify-content: center;
 }
-.retragere {
+#butonRetragere {
     background-color: #2196f3;
     height: 30px;
     width: 350px;

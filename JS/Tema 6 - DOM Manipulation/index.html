@@ -23,22 +23,21 @@
             <div class="detalii_cont">
                 <h3>Suma disponibila</h3>
                 <div class="detalii_suma_disponibila">
-                    <h2 class="suma_disponibila"></h2>
+                    <h2 id="textSumaDisponila"></h2>
                     <h2 class="moneda">RON</h2>
                 </div>
                 
             </div>
             <div class="detalii_retragere">
-                <h3>Suma dorita pentru retradere</h3>
-                <input type="number" min="0" class="valoare"/>
-                <p class="errorText"></p>
+                <h3>Suma dorita pentru retragere</h3>
+                <input id="inputSumaRetragere" type="text"/>
+                <h3 id="textEroare"></h3>
             </div>
         </div>
         <div class="buton_retragere">
-            <button class="retragere" disabled>RETRAGE SUMA</button>
+            <button id="butonRetragere">RETRAGE SUMA</button>
         </div> 
     </div>
-
-    <script src="script-Bancomat.js"></script>
+    <script src="script-bancomat-corectat.js"></script>
 </body>
 </html>
