@@ -61,3 +61,24 @@ function selecteazaPreturile (listaProduse) {
   }
   selecteazaPreturile(PRODUSE);
 
+  //c) Construieste o functie numita calculeazaValoareMedie care primeste un parametru listaProduse. Functia va returna media valorii totale a produselor care au cantitatea mai mare ca 0.
+//In cazul in care listaProduse este goala sau nu are nici un produs cu cantitatea mai mare ca 0 va returna valoarea 0. Foloseste functiile de la punctele a si b pentru a reduce codul scris.
+let sum = 0;
+let listaProduseAvg = 0;
+function calculeazaValoareMedie (listaProduse) {
+    
+    for (let i =0; i < listaProduse.length; i ++){
+      const a = sortByQuantity(PRODUSE, 0);
+      const b = selecteazaPreturile(PRODUSE);
+      const sum = a + b;
+      const listaProduseAvg = sum / listaProduse.length;
+      return listaProduseAvg;
+      
+    }
+ 
+}   
+    
+const rezultat = calculeazaValoareMedie (PRODUSE);
+  
+console.log (rezultat);
+
