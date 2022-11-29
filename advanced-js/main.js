@@ -324,6 +324,45 @@ function exempluReduce(){
 
 // exempluReduce();
 
+function exempluRaport() {
+    const listaAngajati = [
+        {
+            nume: "Paul",
+            dep: "Vanzari",
+            salariuNet: 2000,
+        },
+        {
+            nume: "Vlad",
+            dep: "Tehnic",
+            salariuNet: 3000,
+        },
+        {
+            nume: "Mirela",
+            dep: "Vanzari",
+            salariuNet: 2500,
+        },
+        {
+            nume: "Eugen",
+            dep: "Paza",
+            salariuNet: 1000,
+        },
+    ];
+
+    //cat de multi bani se vor aloca in urmatoare 12 luni pentru angajatii din departamentul vanzari
+    //presupunem ca salariu brut = 2 * salariuNet
+
+    const result = listaAngajati
+        .filter((angajat) => angajat.dep === "Vanzari")
+        .map((angajatVanzari) => angajatVanzari.salariuNet * 24)
+        .reduce((total, salariuBrut) => total + salariuBrut, 0);
+
+    console.log(result);
+}
+
+exempluRaport();
+
+
+
 
 
 
