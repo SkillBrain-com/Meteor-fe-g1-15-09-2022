@@ -32,3 +32,28 @@ let lista = [5];
 // pureFunctionWithNonPrimitive(lista);
 // pureFunctionWithNonPrimitiveWithoutSideEffect(lista);
 // console.log(lista);
+
+//ES5
+const f1 = function() {};
+
+//ES6
+const f2 = () => {};
+
+//ES5
+// function square(nr) {
+//     return nr * nr;
+// }
+
+//ES6
+// const square = (nr) => nr * nr;
+
+const sum = (a, b) => a + b;
+const times = (a, b) => a * b;
+const doOperation = (operand1, operand2, operation) => operation(operand1, operand2);
+
+const sumOfNumbers = doOperation(10,10, sum);
+const productOfNumbers = doOperation(10,10, times);
+console.log(sumOfNumbers);
+console.log(productOfNumbers);
+
+console.log(doOperation(10, 10, (a, b) => a * 2 + b * 4));
