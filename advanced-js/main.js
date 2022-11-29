@@ -210,6 +210,23 @@ function exempluSome(){
 // exempluSome();
 
 /* FIND */
+function exempluFind(){
+    const listaNumere = [1, 3, 3, 2, 5, 1, 7, 2, 4, 11];
+
+    // let elementCautat;
+    // for (let i = 0; i < listaNumere.length; i++) {
+    //     if (listaNumere[i] % 2 === 0) {
+    //         elementCautat = listaNumere[i];
+    //         break;
+    //     }
+    // }
+
+    const elementCautat = listaNumere.find((x) => x % 2 === 0);
+
+    console.log(elementCautat);
+}
+
+exempluFind();
 
 /* FIND INDEX */
 
