@@ -46,4 +46,11 @@ for(i=0; i < Transmisie.length; i++){
     if(Transmisie[i]==='Manuala')
     console.log(`${Marca[i]} ${Model[i]};`) 
 }
+console.log("Exercitiul-5");
+let profit=0;
+const PretVanzare = [18000,12000,18000,27300,12000,14000,12000,9000,37000,19900,43000,27400,21500,13590]
+for(i=0;i<PretVanzare.length;i++){
+    profit=PretVanzare[i]-PretCumparare[i];
+    console.log(`Profitul pentru ${Marca[i]} ${Model[i]} a fost de ${profit}.`); 
+}
 
