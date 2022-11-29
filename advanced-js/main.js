@@ -55,5 +55,14 @@ const sumOfNumbers = doOperation(10,10, sum);
 const productOfNumbers = doOperation(10,10, times);
 console.log(sumOfNumbers);
 console.log(productOfNumbers);
-
 console.log(doOperation(10, 10, (a, b) => a * 2 + b * 4));
+
+
+const isEven = (value) => value % 2 === 0
+const myFilter = (value) => value.startsWith("A") && value.includes("@");
+
+/*filterFunction(value: any) => boolean */
+const checkFilter = (value, filterFunction) => filterFunction(value);
+
+console.log(checkFilter(10, isEven));
+console.log(checkFilter("AhelloWorld@", myFilter));
