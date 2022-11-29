@@ -211,7 +211,25 @@ function exempluSome(){
 
 /* FIND */
 function exempluFind(){
-    const listaNumere = [1, 3, 3, 2, 5, 1, 7, 2, 4, 11];
+    // const listaNumere = [1, 3, 3, 2, 5, 1, 7, 2, 4, 11];
+    const listaAngajati = [
+        {
+            nume: "Paul",
+            dep: "Vanzari"
+        },
+        {
+            nume: "Vlad",
+            dep: "Tehnic"
+        },
+        {
+            nume: "Mirela",
+            dep: "Vanzari"
+        },
+        {
+            nume: "Eugen",
+            dep: "Paza"
+        },
+    ]
 
     // let elementCautat;
     // for (let i = 0; i < listaNumere.length; i++) {
@@ -221,14 +239,50 @@ function exempluFind(){
     //     }
     // }
 
-    const elementCautat = listaNumere.find((x) => x % 2 === 0);
+    // const elementCautat = listaNumere.find((x) => x % 2 === 0);
+    // const elementCautat = listaAngajati.find((angajat) => angajat.dep === "Vanzari");
+    const elementCautat = listaAngajati.find((angajat) => angajat.nume.startsWith("M") && angajat.dep === "Vanzari");
 
     console.log(elementCautat);
 }
 
-exempluFind();
+// exempluFind();
 
 /* FIND INDEX */
+
+function exempluFindIndex(){
+    const listaAngajati = [
+        {
+            nume: "Paul",
+            dep: "Vanzari"
+        },
+        {
+            nume: "Vlad",
+            dep: "Tehnic"
+        },
+        {
+            nume: "Mirela",
+            dep: "Vanzari"
+        },
+        {
+            nume: "Eugen",
+            dep: "Paza"
+        },
+    ]
+
+    // let elementCautat;
+    // for (let i = 0; i < listaNumere.length; i++) {
+    //     if (listaNumere[i] % 2 === 0) {
+    //         elementCautat = i;
+    //         break;
+    //     }
+    // }
+    const elementCautat = listaAngajati.findIndex((angajat) => angajat.nume.startsWith("M") && angajat.dep === "Vanzari");
+
+    console.log(elementCautat);
+}
+
+exempluFindIndex();
 
 /* REDUCE */
 
