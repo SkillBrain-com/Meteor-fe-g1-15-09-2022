@@ -268,7 +268,7 @@ function exempluFindIndex(){
             nume: "Eugen",
             dep: "Paza"
         },
-    ]
+    ];
 
     // let elementCautat;
     // for (let i = 0; i < listaNumere.length; i++) {
@@ -282,12 +282,47 @@ function exempluFindIndex(){
     console.log(elementCautat);
 }
 
-exempluFindIndex();
+// exempluFindIndex();
 
 /* REDUCE */
 
+function exempluReduce(){
+    const listaNumere = [1, 3, 3, 2, 5, 1, 7, 2, 4, 11];
+    const listaAngajati = [
+        {
+            nume: "Paul",
+            dep: "Vanzari",
+            puncteAngajat: 10,
+        },
+        {
+            nume: "Vlad",
+            dep: "Tehnic",
+            puncteAngajat: 11,
+        },
+        {
+            nume: "Mirela",
+            dep: "Vanzari",
+            puncteAngajat: 19,
+        },
+        {
+            nume: "Eugen",
+            dep: "Paza",
+            puncteAngajat: 8,
+        },
+    ];
+    // let suma = 0;
+    // for(let i=0; i < listaNumere.length; i++) {
+    //     suma += listaNumere[i];
+    // }
 
+    // const suma = listaNumere.reduce((valAnteriora, x) => valAnteriora + x, 0);
+    const sumaPuncte = listaAngajati.reduce((valAnteriora, angajat) => valAnteriora + angajat.puncteAngajat, 0);
+    
+    console.log(suma);
+    console.log(sumaPuncte);
+}
 
+// exempluReduce();
 
 
 
