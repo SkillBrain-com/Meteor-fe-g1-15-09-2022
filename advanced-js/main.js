@@ -146,6 +146,33 @@ function exempluFilterMatrix(){
 
 // exempluFilterMatrix();
 
+/* CHAINING */
+
+function chainingExample(){
+    const listaNumere = [1, 3, 3, 2, 5, 1, 7, 2, 4, 11];
+
+    // o noua lista, care contine
+    // doar patratul elmenetelor care
+    // au patratul mai mare decat 4
+
+    // const listaNoua = [];
+    // for (let i = 0; i < listaNumere.length; i++) {
+    //     const patrat = listaNumere[i] * listaNumere[i];
+    //     if (patrat > 4) {
+    //         listaNoua.push(patrat);
+    //     }
+    // }
+    // console.log(listaNoua);
+
+    const listaNoua = listaNumere
+        .map((nr) => nr * nr)
+        .filter((patrat) => patrat > 4)
+        .map((patratFiltrat) => patratFiltrat * 10);
+
+    console.log(listaNoua);
+}
+
+chainingExample();
 /* EVERY */
 
 /* SOME/ANY */
