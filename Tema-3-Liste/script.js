@@ -15,3 +15,13 @@ for(i=0; i < PretCumparare.length; i++){
 }
 MediePret=MediePret/PretCumparare.length;
 console.log(`Media preturilor de cumparare este ${MediePret.toFixed(2)}`);
+
+console.log("Exercitiul-3");
+let PretMax=PretCumparare[0], PretMin=PretCumparare[0]; 
+for(i=1; i < PretCumparare.length; i++){              
+    if(PretMax <= PretCumparare[i])
+    PretMax = PretCumparare[i];
+    if(PretMin >= PretCumparare[i])
+    PretMin = PretCumparare[i];
+}
+console.log(`Pretul minim este ${PretMin}, iar pretul maxim este ${PretMax}`);
