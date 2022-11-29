@@ -86,9 +86,9 @@ function exempluMap(){
     const listaNoua = creeazaListaPatrate(listaNumere);
     
     //map creeaza intern o lista noua si o returneaza
-    const listaNouaMap = listaNumere.map((x) => 2 * x + 4); 
+    const listaNouaMap = listaNumere.map((x) => x * x); 
 
-    console.log(listaNoua);
+    // console.log(listaNoua);
     console.log(listaNouaMap);
 }
 
@@ -107,9 +107,44 @@ function exempluForEach(){
     listaNumere.forEach((x) => console.log(x));
 }
 
-exempluForEach();
+// exempluForEach();
 
 /* FILTER */
+
+function exempluFilter(){
+    const listaNumere = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+    // const listaNoua = [];
+    // for (let i = 0; i < listaNumere.length; i++) {
+    //     if (listaNumere[i] % 2 === 0) {
+    //         listaNoua.push(listaNumere[i]);
+    //     }
+    // }
+    // console.log(listaNoua);
+    const listaNoua = listaNumere.filter((x) => x % 2 === 0);
+    console.log(listaNoua);
+}
+
+// exempluFilter();
+
+function exempluFilterMatrix(){
+    const matrix = [
+        [1, 0, 0 ,0, 0], // [1]
+        [0, 0, 0 ,0, 1], // [1]
+        [0, 0, 0 ,1, 0], // [1]
+        [0, 0, 0 ,0, 0], // []
+        [0, 1, 0 ,0, 0], // [1]
+    ];
+
+    const matriceFiltrata = matrix.filter((rand) => {
+        const listaFiltrata = rand.filter((el) => el === 1);
+        return listaFiltrata.length > 0;
+    });
+
+    console.log(matriceFiltrata) ;
+}
+
+// exempluFilterMatrix();
 
 /* EVERY */
 
