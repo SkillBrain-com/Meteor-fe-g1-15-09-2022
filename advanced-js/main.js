@@ -86,7 +86,7 @@ function exempluMap(){
     const listaNoua = creeazaListaPatrate(listaNumere);
     
     //map creeaza intern o lista noua si o returneaza
-    const listaNouaMap = listaNumere.map((x) => x * x); 
+    const listaNouaMap = listaNumere.map((numar) => numar * numar); 
 
     console.log(listaNoua);
     console.log(listaNouaMap);
