@@ -172,10 +172,46 @@ function chainingExample(){
     console.log(listaNoua);
 }
 
-chainingExample();
+// chainingExample();
+
 /* EVERY */
 
-/* SOME/ANY */
+function exempluEvery(){
+    const listaNumere = [1, 3, 3, 2, 5, 1, 7, 2, 4, 11];
+
+    // let suntToatePare = true;
+    // for (let i = 0; i < listaNumere.length; i++) {
+    //     if (listaNumere[i] % 2 !== 0) {
+    //         suntToatePare = false;
+    //     }
+    // }
+
+    //returneaza un boolean true daca toate elementele respecta conditia altfel false
+    const suntToatePare = listaNumere.every((nr) => nr % 2 === 0);
+    console.log(suntToatePare);
+}
+
+// exempluEvery();
+/* SOME */
+function exempluSome(){
+    const listaNumere = [1, 3, 3, 2, 5, 1, 7, 2, 4, 11];
+
+    // let existaCelPutinUnNumarPar = false;
+    // for (let i = 0; i < listaNumere.length; i++) {
+    //     if (listaNumere[i] % 2 === 0) {
+    //         existaCelPutinUnNumarPar = true;
+    //     }
+    // }
+
+    //returneaza un boolean true daca cel putin un element respecta conditia altfel false
+    const existaCelPutinUnNumarPar = listaNumere.some((nr) => nr % 2 === 0);
+    console.log(existaCelPutinUnNumarPar);
+}
+// exempluSome();
+
+/* FIND */
+
+/* FIND INDEX */
 
 /* REDUCE */
 
