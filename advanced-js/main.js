@@ -81,22 +81,33 @@ function creeazaListaPatrate(listaNumere) {
     return listaNoua;
 }
 
-function exempluMap(){
+function exempluMap(){    
     const listaNumere = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
     const listaNoua = creeazaListaPatrate(listaNumere);
     
     //map creeaza intern o lista noua si o returneaza
-    const listaNouaMap = listaNumere.map((numar) => numar * numar); 
+    const listaNouaMap = listaNumere.map((x) => 2 * x + 4); 
 
     console.log(listaNoua);
     console.log(listaNouaMap);
 }
 
-exempluMap();
-
-
+// exempluMap();
 
 /* FOREACH */
+
+function exempluForEach(){
+    const listaNumere = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+    // for (let i = 0;i < listaNumere.length; i++) {
+    //     console.log(listaNumere[i]);
+    // }
+
+    //forEach nu creeaza o lista cu valorile returnate
+    listaNumere.forEach((x) => console.log(x));
+}
+
+exempluForEach();
 
 /* FILTER */
 
