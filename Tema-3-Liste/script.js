@@ -54,3 +54,16 @@ for(i=0;i<PretVanzare.length;i++){
     console.log(`Profitul pentru ${Marca[i]} ${Model[i]} a fost de ${profit}.`); 
 }
 
+console.log("Exercitiul-6");
+let MedieProfit=0;
+for(i=0; i<PretVanzare.length; i++){
+    MedieProfit=MedieProfit+PretVanzare[i]-PretCumparare[i];
+}
+MedieProfit=MedieProfit/PretVanzare.length;
+console.log(`Profitul mediu este de ${MedieProfit.toFixed(2)}.`);
+for(i=0; i<PretVanzare.length; i++){
+    profit=PretVanzare[i]-PretCumparare[i];
+    if(profit > MedieProfit)
+    console.log(`Automobilul ${Marca[i]} ${Model[i]} are profitul peste medie.`);
+  }
+  
