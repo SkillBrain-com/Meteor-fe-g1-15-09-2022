@@ -11,20 +11,30 @@
 
     let celMaiMicPret = pretCumparare[0];
     let celMaiMarePret = pretCumparare[0];
+    let indexPtCelMaiIefin, indexPtCelMaiScump
+
 
 
     for (let i = 0; i < pretCumparare.length; i++) {
+        
         if (pretCumparare[i] < celMaiMicPret) {
             celMaiMicPret = pretCumparare[i];
+            indexPtCelMaiIefin = i
         }
 
         if (pretCumparare[i] > celMaiMarePret) {
             celMaiMarePret = pretCumparare[i];
+            indexPtCelMaiScump = i
         }
     }
+ 
 
     console.log(`Cel mai mic pret este: ${celMaiMicPret}`)
     console.log(`Cel mai mare pret este: ${celMaiMarePret}`)
+
+    // 1. Extra
+    console.log(`Cea mai ieftina masina este: ${marca[indexPtCelMaiIefin]} ${model[indexPtCelMaiIefin]} ${pretCumparare[indexPtCelMaiIefin]}`)
+    console.log(`Cea mai scumpa masina este: ${marca[indexPtCelMaiScump]} ${model[indexPtCelMaiScump]} ${pretCumparare[indexPtCelMaiScump]}`)
 
 
     // end IIFE
