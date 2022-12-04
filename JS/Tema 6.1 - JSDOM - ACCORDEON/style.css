@@ -40,10 +40,44 @@ color: #2196f3;
     margin: 0.5rem 0;
 }
 
+#select-all {
+    display: flex;
+    justify-content: end;
+}
+
+#select-all-btn {
+    display: flex;
+    justify-content: center;
+    width: 7rem;
+    text-decoration: underline;
+    font-size: 1rem;
+    padding: 0.5rem;
+    background-color: #2196f3;
+    border: none;
+    border-radius: 10px;
+    color: #ffffff;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
+}
+
+#select-all-btn:hover {
+    font-weight: bolder;
+
+}
+
+.delete-btn {
+    display: flex;
+    position: relative;
+    right: 1rem;
+}
+
+#cards-list {
+    list-style: none;
+}
+
 .accordion-item-header {
    background-color: #2196f3;
    color: #ffffff; 
-    padding: 1rem 3rem 1rem 1rem;
+    padding: 0.7rem 3rem 0.5rem 1rem;
     display: flex;
     align-items: center;
     position: relative;

@@ -24,6 +24,17 @@ Comportament
 - cand se apasa pe butonul de ascunde detalii, se va ascunde continutul acelui card
 - unele carduri vor fi predeschise in momentul in care un utilizator deschide pagina(la fel ca in design)
 - in functie de cum este cardul(deschis/inchis) se va modifica textul de vezi detalii/ascunde detalii
+
+Extra 😊
+- creeaza un buton cu textul vezi tot/ascunde tot care va avea rolul sa deschida/inchida toate cardurile
+
+Extra extra 🎉
+- adauga un buton de sterge pe fiecare card, care va sterge acel card din lista
+
+Extra extra 2 🔥
+- creeaza doua inputuri care sa adauge un card nou la lista de carduri, astfel incat sa aibe un 
+comportament similar cu celelalte. Primul input va da titlul cardului, iar al doilea input(care ar 
+  trebui sa fie un text area) va pune descrierea acelui card
 */
 
 /////////////////////////////////////////* MODEL *//////////////////////////////////////////////////////
