@@ -46,6 +46,8 @@ const accordionItemHeaders = document.querySelectorAll(
 const accordionItemHeader = document.querySelector(".accordion-item-header");
 const showOnLoad = document.querySelectorAll(".show-on-load");
 const accordionItemBody = document.querySelector(".accordion-item-body");
+const deleteBtn = document.querySelector(".delete-btn");
+const accordionItem = document.querySelector(".accordion-item");
 
 /////////////////////////////////////* Functii utilitare *///////////////////////////////////////////////
 
