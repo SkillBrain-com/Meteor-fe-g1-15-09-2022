@@ -1,4 +1,4 @@
-
+(function(){
 //let ceaMaiMareReducere = BAZA_DE_DATE[0].pret * BAZA_DE_DATE[0].procentReducere / 100;
 //console.log(ceaMaiMareReducere);
 
@@ -18,4 +18,5 @@ for (let i = 0; i < BAZA_DE_DATE.length; i++) {
     }
 }
 
-console.log(`cea mai mare reducere o are articolul ${BAZA_DE_DATE[pozitie].nume} cu o reducere de ${ceaMaiMareReducere}cu un pret final de ${BAZA_DE_DATE[pozitie].pret - ceaMaiMareReducere}`)
+console.log(`cea mai mare reducere o are articolul ${BAZA_DE_DATE[pozitie].nume} cu o reducere de ${ceaMaiMareReducere}cu un pret final de ${BAZA_DE_DATE[pozitie].pret - ceaMaiMareReducere}`);
+})()
