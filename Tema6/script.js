@@ -19,7 +19,7 @@ function transFloat(input) {
 inputSuma.addEventListener("keyup",function(){
     const sold=transFloat(curentSum.innerHTML);
     const extras=transFloat(inputSuma.value);
-    if(extras > sold || extras===0){
+    if(extras > sold || extras<5){
         buttonSum.innerHTML = "Valoare invalida";
         buttonExtract.style.backgroundColor="#9a9a9a";
         buttonExtract.disabled = true;
@@ -41,7 +41,7 @@ inputSuma.addEventListener("keyup",function(){
 buttonExtract.addEventListener("click", function(){
 const sold=transFloat(curentSum.innerHTML);
 const extras=transFloat(inputSuma.value);
-if(extras===0){
+if(extras < 5){
     errorText.innerHTML = "Valoare introdusa incorecta.";
 return;}
 const rezultat=dif(sold,extras);
