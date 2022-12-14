@@ -72,13 +72,16 @@ const completeBookList = [
   },
 ];
 
+//////////////////////////// model ////////////////////////////////////////////////////
+
 const bodyTabelBooks = document.querySelector("#body-tabel-books");
 const searchBtn = document.querySelector("#search-btn");
-const valueInputText = document.querySelector("#search-text").value;
+const valueInputText = document.querySelector("#search-text");
+const resetBtn = document.querySelector("#reset-btn");
 
 const bookListCopy = [...completeBookList];
 
-buildTable(completeBookList);
+/////////////////////////////// view ///////////////////////////////////////
 
 function buildTable(book) {
   let table = bodyTabelBooks;
@@ -92,54 +95,80 @@ function buildTable(book) {
     table.innerHTML += row;
   }
 }
+buildTable(bookListCopy);
 
-function filterByName(bookListCopy, valueInputText) {
-  const newList = [];
-  for (let i = 0; i < bookListCopy.length; i++) {
-    const book = bookListCopy[i];
-    if (book.titlu.includes(valueInputText)) {
-      newList.push(book);
-    }
-  }
+// const filteredBooks = (bookList, value) =>
+//   bookList.filter((book) => book.titlu.includes(value));
 
-  return newList;
-}
+///////////////// la arrow function nu stiu sa adaug toLowerCase //////////////////////////////////
 
-function searchTable(value, book) {
-  let filteredBooks = [];
-  for (let i = 0; i < book.length; i++) {
+function filteredBooks(bookList, value) {
+  const filteredBooksList = [];
+  for (let i = 0; i < bookList.length; i++) {
     value = value.toLowerCase();
-    let name = book[i].titlu.toLowerCase();
-    if (name.includes(value)) {
-      filteredBooks.push(book[i]);
+    let book = bookList[i].titlu.toLowerCase();
+    if (book.includes(value)) {
+      filteredBooksList.push(bookList[i]);
     }
   }
-  return filteredBooks;
+  return filteredBooksList;
 }
 
-// const filterByName = (bookListCopy, valueInputText) =>
-//   bookListCopy.filter((book) => book.titlu.includes(valueInputText));
+////////// de reparat functia de mai jos ///////////
+function displayFilteredBooks() {
+  searchedText = document.querySelector("#search-text").value;
+  const selectedBooks = filteredBooks(bookListCopy, searchedText);
+  buildTable(selectedBooks);
+}
 
-document
-  .querySelector("#search-btn")
-  .addEventListener("click", filterByName(bookListCopy, valueInputText));
+searchBtn.addEventListener("click", () => {
+  displayFilteredBooks();
+});
 
-//////////////////////////////////////////////////////////////////////////////////////////////////////
+function resetSearch() {
+  if (valueInputText.innerText === "") {
+    resetBtn.style.visibility = "hidden";
+  }
+  if (valueInputText.innerText !== "") {
+    resetBtn.style.visibility = "visible";
+  }
+}
+resetSearch();
 
-// bookListCopy.forEach((book) => {
-//   const row = document.createElement("tr");
+resetBtn.addEventListener("click", function () {
+  valueInputText.innerText = null;
+});
+// function buildTable(book) {
+//   let table = bodyTabelBooks;
+//   table.innerHTML = "";
+//   for (let i = 0; i < book.length; i++) {
+//     let row = `<tr>
+//         <td>${book[i].titlu}</td>
+//         <td>${book[i].autor}</td>
+//         <td>${book[i].numarCititori}</td>
+//       </tr>`;
+//     table.innerHTML += row;
+//   }
+// }
+// buildTable(bookListCopy);
 
-//   const titleCell = document.createElement("td");
-//   titleCell.innerText = book.titlu;
-//   row.appendChild(titleCell);
+// function buildTable() {
+//   bookListCopy.forEach((book) => {
+//     const row = document.createElement("tr");
 
-//   const writerCell = document.createElement("td");
-//   writerCell.innerText = book.autor;
-//   row.appendChild(writerCell);
+//     const titleCell = document.createElement("td");
+//     titleCell.innerText = book.titlu;
+//     row.appendChild(titleCell);
 
-//   const readersNumberCell = document.createElement("td");
-//   readersNumberCell.innerText = `${book.numarCititori}`;
-//   row.appendChild(readersNumberCell);
+//     const writerCell = document.createElement("td");
+//     writerCell.innerText = book.autor;
+//     row.appendChild(writerCell);
 
-//   bodyTabelBooks.appendChild(row);
-// });
+//     const readersNumberCell = document.createElement("td");
+//     readersNumberCell.innerText = `${book.numarCititori}`;
+//     row.appendChild(readersNumberCell);
+
+//     bodyTabelBooks.appendChild(row);
+//   });
+// }
+// buildTable();

@@ -5,3 +5,7 @@ table, td, th, tr {
 td, tr, th {
     padding: 0.5rem 1rem 0.5rem 1rem;
 }
+
+#reset-btn {
+    visibility: hidden;
+}
