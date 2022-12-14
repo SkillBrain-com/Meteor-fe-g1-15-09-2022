@@ -9,26 +9,29 @@
 </head>
 <body>
 
-<h1>METEOR BOOKS</h1>
-<h2>Motor cautare carti</h2>
-<div>
-    <input id="search-text" type="text">
-    <button id="search-btn">Cauta</button>
-    <button id="reset-btn">Reseteaza cautarea</button>  
+<div id="title">
+    <h1 id="meteor-logo">METEOR</h1>
+    <h1 id="books">BOOKS</h1>
 </div>
+<h2>Motor cautare carti</h2>
+<div id="search-bar">
+        <input id="search-text" type="text" placeholder="Cauta aici...">
+        <button id="search-btn" class="style-btn">Cauta</button>
+        <button id="reset-btn" class="style-btn">Reseteaza cautarea</button>  
+    </div>
+</div>
+<p id="results-number"></p>
 <div>
-    <table>
+    <table class="no-spacing" cellspacing="0">
         <thead>
             <tr class="row">
                 <th>Titlu</th>
                 <th>Autor</th>
-                <th>Numar cititori</th>
+                <th>Cititori</th>
             </tr>
         </thead>
         <tbody id="body-tabel-books">
-
         </tbody>
-    
     </table>
 </div>
     <script src="script-array-methodes.js"></script>

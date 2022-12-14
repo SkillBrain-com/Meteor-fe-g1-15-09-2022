@@ -78,6 +78,7 @@ const bodyTabelBooks = document.querySelector("#body-tabel-books");
 const searchBtn = document.querySelector("#search-btn");
 const valueInputText = document.querySelector("#search-text");
 const resetBtn = document.querySelector("#reset-btn");
+const resultsNumber = document.querySelector("#results-number");
 
 const bookListCopy = [...completeBookList];
 
@@ -114,61 +115,38 @@ function filteredBooks(bookList, value) {
   return filteredBooksList;
 }
 
-////////// de reparat functia de mai jos ///////////
 function displayFilteredBooks() {
   searchedText = document.querySelector("#search-text").value;
   const selectedBooks = filteredBooks(bookListCopy, searchedText);
   buildTable(selectedBooks);
 }
 
-searchBtn.addEventListener("click", () => {
-  displayFilteredBooks();
-});
-
-function resetSearch() {
-  if (valueInputText.innerText === "") {
-    resetBtn.style.visibility = "hidden";
-  }
-  if (valueInputText.innerText !== "") {
-    resetBtn.style.visibility = "visible";
+function dispayResetBtn() {
+  if (valueInputText.value === "") {
+    resetBtn.hidden = true;
+  } else {
+    resetBtn.hidden = false;
   }
 }
-resetSearch();
+dispayResetBtn(valueInputText);
 
-resetBtn.addEventListener("click", function () {
-  valueInputText.innerText = null;
+function searchResultNumber() {
+  const results = filteredBooks(bookListCopy, searchedText).length;
+  resultsNumber.innerText = `Numar rezultate: ${results}`;
+}
+
+function showResultNumber() {}
+
+searchBtn.addEventListener("click", () => {
+  displayFilteredBooks();
+  searchResultNumber();
 });
-// function buildTable(book) {
-//   let table = bodyTabelBooks;
-//   table.innerHTML = "";
-//   for (let i = 0; i < book.length; i++) {
-//     let row = `<tr>
-//         <td>${book[i].titlu}</td>
-//         <td>${book[i].autor}</td>
-//         <td>${book[i].numarCititori}</td>
-//       </tr>`;
-//     table.innerHTML += row;
-//   }
-// }
-// buildTable(bookListCopy);
 
-// function buildTable() {
-//   bookListCopy.forEach((book) => {
-//     const row = document.createElement("tr");
+valueInputText.addEventListener("keyup", () => {
+  dispayResetBtn();
+});
 
-//     const titleCell = document.createElement("td");
-//     titleCell.innerText = book.titlu;
-//     row.appendChild(titleCell);
-
-//     const writerCell = document.createElement("td");
-//     writerCell.innerText = book.autor;
-//     row.appendChild(writerCell);
-
-//     const readersNumberCell = document.createElement("td");
-//     readersNumberCell.innerText = `${book.numarCititori}`;
-//     row.appendChild(readersNumberCell);
-
-//     bodyTabelBooks.appendChild(row);
-//   });
-// }
-// buildTable();
+resetBtn.addEventListener("click", () => {
+  buildTable(bookListCopy);
+  valueInputText.value = null;
+});
