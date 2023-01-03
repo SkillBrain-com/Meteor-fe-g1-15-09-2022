@@ -1,12 +1,20 @@
-import MyInput from "./MyInput";
+import { useState } from "react";
 
-function NameText(){
+//properties -> props
+function NameText(props){
+    const [clicks, setClicks] = useState(0);
+
+    const handleOnClick = () => {
+        const newClicks = clicks + 1;
+        setClicks(newClicks);
+    };
+
     return (
-        <div>
-            <MyInput/>
-            <h1>Hello Cezar</h1>
-            <h2>Hello Cezar</h2>
-            <h3>Hello Cezar</h3>
+        <div onClick={handleOnClick}>
+            <h1>Hello {props.name}</h1>
+            <h2>Hello {props.name}</h2>
+            <h3>Hello {props.name}</h3>
+            <h1>{clicks}</h1>
         </div>
     )
 }
