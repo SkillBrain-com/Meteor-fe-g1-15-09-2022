@@ -39,3 +39,15 @@
 .read-the-docs {
   color: #888;
 }
+
+.green-bg{
+  background-color: lightgreen;
+}
+
+.orange-bg{
+  background-color: orange;
+}
+
+.red-bg{
+  background-color: red;
+}
