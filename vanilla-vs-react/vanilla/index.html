@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap" rel="stylesheet">
+
+    <!--This is used to get all icons from font awesome-->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" rel="stylesheet"
+      type="text/css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Vite + Vanilla</title>
+  </head>
+  <body>
+    <div id="app">
+      <div class="flex p-2 bg-orange-500 w-full items-center sticky top-0 drop-shadow">
+        <h1 class="text-3xl mr-5">METEOR</h1>
+        <div class="flex grow p-2 items-center">
+          <input class="rounded w-1/2 p-1 mr-2" id="searchInput"/>
+          <span class="fa fa-search"></span>
+        </div>
+      </div>
+      <div class="w-full p-8 flex justify-center">
+        <table class="w-1/2">
+          <thead>
+            <tr class="bg-orange-100">
+              <th class="border p-2">Title</th>
+              <th class="border p-2">Author</th>
+            </tr>
+          </thead>
+          <tbody id="booksTable">
+  
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <script src="/main.js"></script>
+  </body>
+</html>
