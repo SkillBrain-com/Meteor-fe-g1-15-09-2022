@@ -3,24 +3,20 @@ import Termometru from './Termometru';
 
 function App() {
   const [temperatura, setTemperatura] = useState(1);
+  const UNITS = ['C','F','K'];
 
   return (
     <div>
-      <Termometru
-        unit="C" 
-        temperatura={temperatura}
-        setTemperatura={setTemperatura}
-      />
-      <Termometru
-        unit="F" 
-        temperatura={temperatura}
-        setTemperatura={setTemperatura}
-      />
-      <Termometru
-        unit="K" 
-        temperatura={temperatura}
-        setTemperatura={setTemperatura}
-      />
+      {
+        UNITS.map((unit, index) => (
+          <Termometru
+            unit={unit}
+            temperatura={temperatura}
+            setTemperatura={setTemperatura}
+            key={`${unit}-${index}`}
+          />
+        ))
+      }
     </div>
   )
 }
