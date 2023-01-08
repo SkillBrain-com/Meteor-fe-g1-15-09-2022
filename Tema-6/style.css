@@ -16,7 +16,7 @@ body{
     box-shadow: 0px 2px 8px rgb(0 0 0 / 25%);
     border-radius: 1.5rem;
     padding: 2.5rem;
-    width: 32rem;
+    width: 25rem;
     margin: 5rem;
     gap: 1rem
        
@@ -78,7 +78,7 @@ padding: 2 px;
 
 
 
-#textSumaDisponibila
+#sumaDisponibila
 {
     font-size: 1.5rem;
     color: #303030;
@@ -89,4 +89,6 @@ padding: 2 px;
     padding-left: 0.5rem;
     font-weight: 700;
     color: #2196f3;
+   
+
 }
