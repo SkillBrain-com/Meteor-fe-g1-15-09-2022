@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import Dashboard from  './Dashboard';
+import Dashboard from  './DashboardLifeCycle';
 
 function App() {
   const [clicks, setClicks] = useState(0);
