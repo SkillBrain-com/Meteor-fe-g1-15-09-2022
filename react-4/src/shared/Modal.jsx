@@ -4,7 +4,7 @@ function Modal({label, handleOnClose, children}){
             className="bg-black bg-opacity-50 w-screen h-screen absolute z-10 inset-0 flex justify-center items-center"
             onClick={handleOnClose}
         >
-            <div className="bg-white rounded drop-shadow-lg w-96">
+            <div className="bounce-in-top bg-white rounded drop-shadow-lg w-96">
                 <div className="bg-orange-500 rounded-t p-4 flex justify-between">
                     <div/>
                     <p className="text-xl">{label}</p>
