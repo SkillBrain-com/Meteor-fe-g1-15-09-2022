@@ -5,7 +5,7 @@ function ProfileModal({ profile, handleOnClose }) {
     return (
         <Modal
             handleOnClose={handleOnClose}
-            label="Oferte"
+            label="Profilul meu"
         >
             <div className="p-4 flex flex-col gap-2">
                 <p className="text-md">{name}</p>
