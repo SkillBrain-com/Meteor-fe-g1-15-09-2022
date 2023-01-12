@@ -1,11 +1,17 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import ProfileModal from "./components/ProfileModal";
 import OffersModal from "./components/OffersModal";
 import PrimaryButton from "./shared/PrimaryButton";
+import Modal from "./shared/Modal";
 
 function App() {
   const [showProfileModal, setShowProfileModal] = useState(false);
   const [showOffersModal, setShowOffersModal] = useState(false);
+  const [showWelcomeModal, setShowWelcomeModal] = useState(false);
+
+  useEffect(() => {
+    handleWelcomeModalOpen();
+  }, []);
 
   const profile = {
     name: "Cezar Mocanu",
@@ -28,6 +34,14 @@ function App() {
 
   function handleOfferModalClose() {
     setShowOffersModal(false);
+  }
+
+  function handleWelcomeModalOpen() {
+    setShowWelcomeModal(true);
+  }
+
+  function handleWelcomeModalClose() {
+    setShowWelcomeModal(false);
   }
 
   return (
@@ -59,6 +73,18 @@ function App() {
           <OffersModal
             handleOnClose={handleOfferModalClose}
           />
+        )
+      }
+      {
+        showWelcomeModal && (
+          <Modal
+            label="Welcome"
+            handleOnClose={handleWelcomeModalClose}
+          >
+            <div className="p-2">
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius perspiciatis corrupti ipsa error commodi laudantium quidem. Expedita et nulla neque odio, ex quaerat quia aliquam, repellendus eum, quod aspernatur? Eaque?</p>
+            </div>
+          </Modal>
         )
       }
     </div>
