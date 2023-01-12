@@ -1,7 +1,7 @@
 import { useState } from "react";
 import ProfileModal from "./components/ProfileModal";
-import PrimaryButton from "./shared/PrimaryButton";
 import OffersModal from "./components/OffersModal";
+import PrimaryButton from "./shared/PrimaryButton";
 
 function App() {
   const [showProfileModal, setShowProfileModal] = useState(false);
