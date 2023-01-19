@@ -37,21 +37,9 @@ function ControlledForm() {
     return (
         <div>
             <h1>Formular Controlat</h1>
-            {/* Input controlat */}
-            <input
-                value={firstName}
-                onChange={handleChangeFirstName}
-            />
-            {/* Input controlat */}
-            <input
-                value={lastName}
-                onChange={handleChangeLastName}
-            />
-            {/* Input controlat */}
-            <input
-                value={city}
-                onChange={handleChangeCity}
-            />
+            <input value={firstName} onChange={handleChangeFirstName} />
+            <input value={lastName}onChange={handleChangeLastName} />
+            <input value={city} onChange={handleChangeCity}/>
             <button onClick={handleOnAddClick}>Add</button>
             <button onClick={handleOnClearClick}>Clear</button>
             <table>
