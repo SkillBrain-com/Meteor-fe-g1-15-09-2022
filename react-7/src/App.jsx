@@ -1,12 +1,14 @@
+import {useState} from "react";
 import { ThemeProvider } from './ThemeContext';
 import Button from './Button';
 import Wrapper from './Wrapper';
 
 function App() {
+  const [theme, setTheme] = useState("dark");
 
   return (
-    <ThemeProvider value="dark">
-      <div className="App">
+    <div className="App">
+      <ThemeProvider value={{theme, setTheme}}>
         <Wrapper>
           <Wrapper>
             <Wrapper>
@@ -16,8 +18,9 @@ function App() {
             </Wrapper>
           </Wrapper>
         </Wrapper>
-      </div>
-    </ThemeProvider>
+      </ThemeProvider>
+    </div>
+
 
   )
 }

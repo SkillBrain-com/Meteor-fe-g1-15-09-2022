@@ -1,6 +1,9 @@
 import {createContext} from "react";
 
-const ThemeContext = createContext("light");
+const ThemeContext = createContext({
+    theme: "light",
+    setTheme: () => undefined
+});
 
 export const ThemeProvider = ThemeContext.Provider;
 
